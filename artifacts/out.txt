@@ -1,14 +1,33 @@
-== save=string -> 500 30
-<h1>Internal Server Error</h1>
-== dup save -> 303 0
-
-== save[x] -> 303 0
-
-== title[] -> 303 0
-
-== dup body -> 303 0
-
-== dup login -> 401 956
-<!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, initial-scale=1">   <title>PokéBox — share your box</title>   <link rel="stylesheet" href="/style.css"> </head> <body>   <header>     <a class="brand" href="/">📦 PokéBox</a>     <nav>       <a href="/">feed</a>                <a href="/boxes">my boxes</a>         <a href="/settings">settings</a>         <a class="who" href="/u/trainer01">@trainer01</a>         <a href="/logout">logout</a>            </nav>   </header>   <main>     <h1>Login</h1> <p class="error">bad credentials</p><form method="post" action="/login" class="card">   <label>Trainer name <input name="username" required></label>   <label>Password <input name="password" type="password" required></label>   <button>Log in</button> </form>    </main>   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer> </body> </html> 
-== reg arr -> 303 0
-
+'c' -> 1793470028.91s '[-] Invalid token.'
+'ct' -> 1793470029.99s '[-] Invalid token.'
+'ctf' -> 1793470031.93s '[-] Invalid token.'
+'ctfc' -> 1793470033.74s '[-] Invalid token.'
+'ctfcu' -> 1793470034.83s '[-] Invalid token.'
+'ctfcup' -> 1793470036.50s '[-] Invalid token.'
+'{' -> 1793470038.46s '[-] Invalid token.'
+'}' -> 1793470039.55s '[-] Invalid token.'
+'ctfcup{' -> 1793470041.43s '[-] Invalid token.'
+'}ctfcup' -> 1793470043.19s '[-] Invalid token.'
+'flag' -> 1793470044.27s '[-] Invalid token.'
+'FLAG' -> 1793470045.92s '[-] Invalid token.'
+'CTFCUP' -> 1793470047.75s '[-] Invalid token.'
+'secret' -> 1793470048.83s '[-] Invalid token.'
+'Secret' -> 1793470050.67s '[-] Invalid token.'
+'SECRET' -> 1793470051.75s '[-] Invalid token.'
+'admin' -> 1793470052.85s '[-] Invalid token.'
+'Admin' -> 1793470053.93s '[-] Invalid token.'
+'root' -> 1793470055.02s '[-] Invalid token.'
+'token' -> 1793470056.10s '[-] Invalid token.'
+'BOT' -> 1793470057.19s '[-] Invalid token.'
+'Bot' -> 1793470058.28s '[-] Invalid token.'
+'bot_token' -> 1793470060.13s '[-] Invalid token.'
+'ctf_bot_token' -> 1793470062.02s '[-] Invalid token.'
+'pokebox' -> 1793470063.11s '[-] Invalid token.'
+'PokéBox' -> 1793470064.20s '[-] Invalid token.'
+'trainer01' -> 1793470065.86s '[-] Invalid token.'
+'*' -> 1793470066.94s '[-] Invalid token.'
+'%' -> 1793470068.03s '[-] Invalid token.'
+'$' -> 1793470069.11s '[-] Invalid token.'
+'.' -> 1793470070.21s '[-] Invalid token.'
+crlf: 1793470071.31s '[-] Invalid token.'
+no-nl: 1793470072.39s '[-] Invalid token.'
