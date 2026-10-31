@@ -1,1 +1,21 @@
-done 0
+login-existing-wrong -> 401 http://27wg1nxt69l0o1gh.instances.ctfcup.online/login ::  <h1>Login</h1> <p class="error">bad credentials</p><form method="post" action="/login" class="card"> <label>Trainer name <input name="username" required></label> <label>Password <input name="password" type="password" required></label> <button>Log in</button> </form> 
+login-unknown -> 401 http://27wg1nxt69l0o1gh.instances.ctfcup.online/login ::  <h1>Login</h1> <p class="error">bad credentials</p><form method="post" action="/login" class="card"> <label>Trainer name <input name="username" required></label> <label>Password <input name="password" type="password" required></label> <button>Log in</button> </form> 
+login-empty -> 401 http://27wg1nxt69l0o1gh.instances.ctfcup.online/login ::  <h1>Login</h1> <p class="error">bad credentials</p><form method="post" action="/login" class="card"> <label>Trainer name <input name="username" required></label> <label>Password <input name="password" type="password" required></label> <button>Log in</button> </form> 
+register-existing -> 400 http://27wg1nxt69l0o1gh.instances.ctfcup.online/register ::  <h1>Register</h1> <p class="error">username taken</p><form method="post" action="/register" class="card"> <label>Trainer name <input name="username" required></label> <label>Password <input name="password" type="password" required></label> <button>Create account</button> </form> 
+register-new-bad -> 200 http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes ::  <h1>My boxes</h1> <form method="post" action="/boxes" enctype="multipart/form-data" class="card"> <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label> <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup:
+try trainer01/password -> 401 
+try admin/password -> 401 
+try bot/password -> 401 
+try trainer/password -> 401 
+try oak/password -> 401 
+try ash/password -> 401 
+try misty/password -> 401 
+try brock/password -> 401 
+try red/password -> 401 
+try blue/password -> 401 
+try professor/password -> 401 
+try referee/password -> 401 
+try judge/password -> 401 
+try moderator/password -> 401 
+try ctfcup/password -> 401 
+try flagbot/password -> 401 
