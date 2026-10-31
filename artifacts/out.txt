@@ -1,158 +1,45 @@
--- register evil 303 len 0
-
--- login evil 303 len 0
-
-cookies {'rack.session': 'Auq%2FbiA90xHhxxhXfTEg%2BY6J8iu%2B7KmP3knQXBrC%2FcJEhbtaKOXof7%2BZkCcXCVocMwLMy6YupO7tcFm17GNQaLv38%2F3kho8YRhc6Mux7ljm0J%2FkQZ41h2P1PWjJSoxyxZKss7NwawWkQUAsfuobQvh%2BvpUs3OjwUneYHoykcqDBk7jAi729Sqr4ZyLoaOQE1W7Ss5FyzbV88oXc5aHnm67w%2FqZPinOrgzfS6Utqw1yPGSBTL%2FWHWc56EFFmcoP7ED1QCuPNEQ%2Bo19oc3xcAc%2BjuG2SgQ1gHSA2mDV%2B%2B9ZKY42WBvfiJuY%2FHvxFQjtaYx3v27ygIaRTZ4Wy8QfSVHh2aXu71zBlzENm2O%2FDLXa4BNsnMg4MDEqGIufo7e'}
--- boxes evil 200 len 1573
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/&lt;img src=x onerror=alert(9)&gt;">@&lt;img src=x onerror=alert(9)&gt;</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>My boxes</h1>
-<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
-  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
-  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
-  <label>Gen III save (.sav) <input type="file" name="save" required></label>
-  <button>Import box</button>
-</form>
-<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
-   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
-   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
-   <a href="/settings">bio</a> too.</p>
-<ul class="feed">
-  
-  <li class="muted">No boxes yet — import a save above.</li>
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
--- profile evil 200 len 979
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/&lt;img src=x onerror=alert(9)&gt;">@&lt;img src=x onerror=alert(9)&gt;</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <div class="trainer-card">
-  <h1>@&lt;img src=x onerror=alert(9)&gt;</h1>
-  
-    <p class="muted">This trainer hasn't written a bio yet.</p>
-  
-</div>
-<h2>Shared boxes</h2>
-<ul class="feed">
-  
-  <li class="muted">No shared boxes yet.</li>
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
--- profile evil2 200 len 979
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/&lt;img src=x onerror=alert(9)&gt;">@&lt;img src=x onerror=alert(9)&gt;</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
- 
--- register evil2 303 len 0
-
--- login evil2 303 len 0
-
--- boxes evil2 200 len 1579
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/&quot;&gt;&lt;svg onload=alert(1)&gt;">@&quot;&gt;&lt;svg onload=alert(1)&gt;</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>My boxes</h1>
-<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
-  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
-  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
-  <label>Gen III save (.sav) <input type="file" name="save" required></label>
-  <button>Import box</button>
-</form>
-<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
-   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
-   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
-   <a href="/settings">bio</a> too.</p>
-<ul class="feed">
-  
-  <li class="muted">No boxes yet — import a save above.</li>
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off
+cookie loaded
+/users -> 404 len 18 '<h1>Not Found</h1>'
+/api -> 404 len 18 '<h1>Not Found</h1>'
+/api/boxes -> 404 len 18 '<h1>Not Found</h1>'
+/api/users -> 404 len 18 '<h1>Not Found</h1>'
+/admin/users -> 404 len 18 '<h1>Not Found</h1>'
+/admin -> 404 len 18 '<h1>Not Found</h1>'
+/report -> 404 len 18 '<h1>Not Found</h1>'
+/bot -> 404 len 18 '<h1>Not Found</h1>'
+/flag -> 404 len 18 '<h1>Not Found</h1>'
+/flag.txt -> 404 len 18 '<h1>Not Found</h1>'
+/debug -> 404 len 18 '<h1>Not Found</h1>'
+/health -> 404 len 18 '<h1>Not Found</h1>'
+/stats -> 404 len 18 '<h1>Not Found</h1>'
+/profile -> 404 len 18 '<h1>Not Found</h1>'
+/me -> 404 len 18 '<h1>Not Found</h1>'
+/account -> 404 len 18 '<h1>Not Found</h1>'
+/logout -> 302 len 0 ''
+/box/1.json -> 404 len 11 'no such box'
+/box/1.txt -> 404 len 11 'no such box'
+/box/1?format=json -> 200 len 1951 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>PokéBox — share'
+/box/1/edit -> 404 len 18 '<h1>Not Found</h1>'
+/box/1/delete -> 404 len 18 '<h1>Not Found</h1>'
+/export -> 404 len 18 '<h1>Not Found</h1>'
+/import -> 404 len 18 '<h1>Not Found</h1>'
+user admin -> 404 MISS []
+user administrator -> 404 MISS []
+user moderator -> 404 MISS []
+user mod -> 404 MISS []
+user oak -> 404 MISS []
+user professor -> 404 MISS []
+user red -> 404 MISS []
+user ash -> 404 MISS []
+user blue -> 404 MISS []
+user cynthia -> 404 MISS []
+user champion -> 404 MISS []
+user trainer -> 404 MISS []
+user staff -> 404 MISS []
+user support -> 404 MISS []
+user bot -> 404 MISS []
+user flag -> 404 MISS []
+user pokebox -> 404 MISS []
+user admin1 -> 404 MISS []
+user root -> 404 MISS []
+user Agent -> 404 MISS []
