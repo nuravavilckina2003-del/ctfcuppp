@@ -1,197 +1,23 @@
 cookie loaded
-=============== POST /boxes valid-save ===============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 303 len 0
+============ anon /box/1 ============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1 -> 403 len 19
+H content-type: text/html;charset=utf-8
+this box is private
+
+============ anon /boxes ============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 302 len 0
+H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/login
+H content-type: text/html;charset=utf-8
+
+
+============ post comment ============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1/comment -> 303 len 0
 H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1
 H content-type: text/html;charset=utf-8
 
 
-=============== GET /boxes ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 200 len 1660
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>My boxes</h1>
-<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
-  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
-  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
-  <label>Gen III save (.sav) <input type="file" name="save" required></label>
-  <button>Import box</button>
-</form>
-<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
-   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
-   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
-   <a href="/settings">bio</a> too.</p>
-<ul class="feed">
-  
-    <li>
-      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
-      <span class="muted">private · 2026-10-31 16:50:02</span>
-    </li>
-  
-  
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-=============== GET / ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/ -> 200 len 856
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>Shared boxes</h1>
-<p class="lead">Fresh teams from trainers around the world.</p>
-<ul class="feed">
-  
-  <li class="muted">No shared boxes yet. Be the first!</li>
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-=============== GET /u/trainer01 ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/u/trainer01 -> 200 len 904
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <div class="trainer-card">
-  <h1>@trainer01</h1>
-  
-    <p class="muted">This trainer hasn't written a bio yet.</p>
-  
-</div>
-<h2>Shared boxes</h2>
-<ul class="feed">
-  
-  <li class="muted">No shared boxes yet.</li>
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-=============== GET /boxes ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 200 len 1660
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>My boxes</h1>
-<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
-  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
-  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
-  <label>Gen III save (.sav) <input type="file" name="save" required></label>
-  <button>Import box</button>
-</form>
-<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
-   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
-   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
-   <a href="/settings">bio</a> too.</p>
-<ul class="feed">
-  
-    <li>
-      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
-      <span class="muted">private · 2026-10-31 16:50:02</span>
-    </li>
-  
-  
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-=============== GET /box/1 ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1 -> 200 len 1970
+============ get /box/1 after comment ============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1 -> 200 len 2045
 H content-type: text/html;charset=utf-8
 <!doctype html>
 <html lang="en">
@@ -254,7 +80,9 @@ H content-type: text/html;charset=utf-8
 <h2>Comments</h2>
 <ul class="comments">
   
-  <li class="muted">No comments yet.</li>
+    <li><strong>@trainer01</strong> hi &lt;script&gt;alert(3)&lt;/script&gt; [b]bold[/b] [shiny]s[/shiny]</li>
+  
+  
 </ul>
 
   <form method="post" action="/box/1/comment" class="card">
@@ -268,3 +96,111 @@ H content-type: text/html;charset=utf-8
 </html>
 
 
+============ post settings ============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/settings -> 303 len 0
+H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/u/trainer01
+H content-type: text/html;charset=utf-8
+
+
+============ get /u/trainer01 ============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/u/trainer01 -> 200 len 1090
+H content-type: text/html;charset=utf-8
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <div class="trainer-card">
+  <h1>@trainer01</h1>
+  
+    <p class="box-desc">bio &lt;script&gt;alert(4)&lt;/script&gt; <em>it</em> <span class="tag-ball">◓</span>p[/pokeball] <span class="tag-heart">♥</span>h[/heart] <span class="tag-fire">🔥f</span> <span class="tag-sparkle">✨sp✨</span></p>
+  
+</div>
+<h2>Shared boxes</h2>
+<ul class="feed">
+  
+  <li class="muted">No shared boxes yet.</li>
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
+
+============ share ============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1/share -> 303 len 0
+H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1
+H content-type: text/html;charset=utf-8
+
+
+============ feed / ============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/ -> 200 len 1153
+H content-type: text/html;charset=utf-8
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>Shared boxes</h1>
+<p class="lead">Fresh teams from trainers around the world.</p>
+<ul class="feed">
+  
+    <li>
+      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
+      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 16:50:02</span>
+      
+        <div class="feed-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</div>
+      
+    </li>
+  
+  
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
+
+anon box 1 -> 200 len 1679 ['My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;']
+anon box 2 -> 404 len 11 []
+anon box 3 -> 404 len 11 []
+anon box 4 -> 404 len 11 []
+anon box 5 -> 404 len 11 []
+anon box 6 -> 404 len 11 []
+anon box 7 -> 404 len 11 []
