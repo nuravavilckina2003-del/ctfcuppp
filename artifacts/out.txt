@@ -1,6 +1,12 @@
 cookie loaded
-=============== GET /settings ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/settings -> 200 len 1055
+=============== POST /boxes valid-save ===============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 303 len 0
+H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1
+H content-type: text/html;charset=utf-8
+
+
+=============== GET /boxes ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 200 len 1660
 H content-type: text/html;charset=utf-8
 <!doctype html>
 <html lang="en">
@@ -24,14 +30,64 @@ H content-type: text/html;charset=utf-8
     </nav>
   </header>
   <main>
-    <h1>Trainer settings</h1>
-<form method="post" action="/settings" class="card">
-  <label>Bio <input name="bio" maxlength="300" value=""
-         placeholder="Say hi! Supports card-markup: [b] [i] [shiny] [sparkle] [fire]"></label>
-  <button>Save bio</button>
+    <h1>My boxes</h1>
+<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
+  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
+  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
+  <label>Gen III save (.sav) <input type="file" name="save" required></label>
+  <button>Import box</button>
 </form>
-<p class="muted">Your bio shows on your public profile at
-   <a href="/u/trainer01">/u/trainer01</a>.</p>
+<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
+   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
+   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
+   <a href="/settings">bio</a> too.</p>
+<ul class="feed">
+  
+    <li>
+      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
+      <span class="muted">private · 2026-10-31 16:50:02</span>
+    </li>
+  
+  
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
+
+=============== GET / ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/ -> 200 len 856
+H content-type: text/html;charset=utf-8
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>Shared boxes</h1>
+<p class="lead">Fresh teams from trainers around the world.</p>
+<ul class="feed">
+  
+  <li class="muted">No shared boxes yet. Be the first!</li>
+</ul>
 
   </main>
   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
@@ -82,55 +138,8 @@ H content-type: text/html;charset=utf-8
 </html>
 
 
-=============== POST /boxes random ===============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 400 len 1584
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>My boxes</h1>
-<p class="error">could not read save: no valid save block</p><form method="post" action="/boxes" enctype="multipart/form-data" class="card">
-  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
-  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
-  <label>Gen III save (.sav) <input type="file" name="save" required></label>
-  <button>Import box</button>
-</form>
-<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
-   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
-   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
-   <a href="/settings">bio</a> too.</p>
-<ul class="feed">
-  
-  <li class="muted">No boxes yet — import a save above.</li>
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-=============== GET /boxes after ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 200 len 1523
+=============== GET /boxes ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 200 len 1660
 H content-type: text/html;charset=utf-8
 <!doctype html>
 <html lang="en">
@@ -167,7 +176,12 @@ H content-type: text/html;charset=utf-8
    <a href="/settings">bio</a> too.</p>
 <ul class="feed">
   
-  <li class="muted">No boxes yet — import a save above.</li>
+    <li>
+      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
+      <span class="muted">private · 2026-10-31 16:50:02</span>
+    </li>
+  
+  
 </ul>
 
   </main>
@@ -176,8 +190,8 @@ H content-type: text/html;charset=utf-8
 </html>
 
 
-=============== GET / ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/ -> 200 len 856
+=============== GET /box/1 ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1 -> 200 len 1970
 H content-type: text/html;charset=utf-8
 <!doctype html>
 <html lang="en">
@@ -201,59 +215,52 @@ H content-type: text/html;charset=utf-8
     </nav>
   </header>
   <main>
-    <h1>Shared boxes</h1>
-<p class="lead">Fresh teams from trainers around the world.</p>
-<ul class="feed">
+    <div class="trainer-card">
+  <h1>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</h1>
+  <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
+
   
-  <li class="muted">No shared boxes yet. Be the first!</li>
+    <p class="box-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</p>
+  
+
+  <dl class="trainer-stats">
+    <div><dt>Trainer</dt><dd>AGENT</dd></div>
+    <div><dt>ID No.</dt><dd>12345</dd></div>
+    <div><dt>Gender</dt><dd>Boy</dd></div>
+    <div><dt>Play time</dt><dd>0:00:00</dd></div>
+    <div><dt>Party</dt><dd>1/6</dd></div>
+  </dl>
+
+  <h2>Party</h2>
+  <ol class="party-list">
+    
+      <li>
+        <span class="nick">PIKA</span>
+        <span class="lv">Lv50</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+  </ol>
+
+  <h2>Team chant</h2>
+  <p class="muted">Your Pokémon's nicknames, shouted together as the team's battle cry:</p>
+  <p class="card-line">A wild cheer erupts: PIKA!</p>
+</div>
+
+  <form method="post" action="/box/1/share">
+    <button>Share to the feed</button>
+  </form>
+
+<h2>Comments</h2>
+<ul class="comments">
+  
+  <li class="muted">No comments yet.</li>
 </ul>
 
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-=============== POST /boxes zeros ===============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 400 len 1589
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>My boxes</h1>
-<p class="error">could not read save: not a valid Gen III save</p><form method="post" action="/boxes" enctype="multipart/form-data" class="card">
-  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
-  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
-  <label>Gen III save (.sav) <input type="file" name="save" required></label>
-  <button>Import box</button>
-</form>
-<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
-   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
-   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
-   <a href="/settings">bio</a> too.</p>
-<ul class="feed">
-  
-  <li class="muted">No boxes yet — import a save above.</li>
-</ul>
+  <form method="post" action="/box/1/comment" class="card">
+    <label>Say something <input name="body" maxlength="500" required></label>
+    <button>Post</button>
+  </form>
 
   </main>
   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
