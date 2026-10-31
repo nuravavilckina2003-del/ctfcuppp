@@ -1,0 +1,16 @@
+name: probe
+on:
+  push:
+    branches: [ 'arena/**' ]
+  workflow_dispatch:
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Fetch target
+        run: |
+          set -x
+          curl -sv -m 25 http://27wg1nxt69l0o1gh.instances.ctfcup.online/ 2>&1 | head -120
+          echo "===== BODY ====="
+          curl -s -m 25 http://27wg1nxt69l0o1gh.instances.ctfcup.online/ | head -300
+          echo "===== END ====="
