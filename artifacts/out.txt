@@ -1,26 +1,1329 @@
-u/admin -> 404 15 no such trainer
-u/administrator -> 404 15 no such trainer
-u/mod -> 404 15 no such trainer
-u/moderator -> 404 15 no such trainer
-u/professor -> 404 15 no such trainer
-u/oak -> 404 15 no such trainer
-u/flag -> 404 15 no such trainer
-u/ctfcup -> 404 15 no such trainer
-u/bot -> 404 15 no such trainer
-u/trainer -> 404 15 no such trainer
-u/trainers -> 404 15 no such trainer
-u/root -> 404 15 no such trainer
-u/support -> 404 15 no such trainer
-u/staff -> 404 15 no such trainer
-u/team -> 404 15 no such trainer
-settings+ {'admin': '1'} -> 303
-   bio has MASSTEST: True | admin words: []
-settings+ {'role': 'admin'} -> 303
-   bio has MASSTEST: True | admin words: []
-settings+ {'is_admin': '1'} -> 303
-   bio has MASSTEST: True | admin words: []
-settings+ {'user_id': '1'} -> 303
-   bio has MASSTEST: True | admin words: []
-register+admin -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes
-nav:  <a href="/">feed</a> <a href="/boxes">my boxes</a> <a href="/settings">settings</a> <a class="who" href="/u/trainer99">@trainer99</a> <a href="/logout">logout</a> 
-settings page fields: ['viewport', 'bio']
+==== /boxes ====
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>My boxes</h1>
+<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
+  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
+  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
+  <label>Gen III save (.sav) <input type="file" name="save" required></label>
+  <button>Import box</button>
+</form>
+<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
+   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
+   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
+   <a href="/settings">bio</a> too.</p>
+<ul class="feed">
+  
+    <li>
+      <a href="/box/242"><strong>beacon</strong></a>
+      <span class="muted">shared · 2026-10-31 17:21:50</span>
+    </li>
+  
+    <li>
+      <a href="/box/241"><strong>team chant <span class="tag-fire">🔥live</span></strong></a>
+      <span class="muted">shared · 2026-10-31 17:08:45</span>
+    </li>
+  
+    <li>
+      <a href="/box/240"><strong>two</strong></a>
+      <span class="muted">private · 2026-10-31 17:06:41</span>
+    </li>
+  
+    <li>
+      <a href="/box/239"><strong>ff-at-99</strong></a>
+      <span class="muted">private · 2026-10-31 17:06:39</span>
+    </li>
+  
+    <li>
+      <a href="/box/238"><strong>no-term-9</strong></a>
+      <span class="muted">private · 2026-10-31 17:06:37</span>
+    </li>
+  
+    <li>
+      <a href="/box/237"><strong>no-term-10</strong></a>
+      <span class="muted">private · 2026-10-31 17:06:35</span>
+    </li>
+  
+    <li>
+      <a href="/box/236"><strong>xsschant</strong></a>
+      <span class="muted">shared · 2026-10-31 17:05:38</span>
+    </li>
+  
+    <li>
+      <a href="/box/235"><strong>xsschant</strong></a>
+      <span class="muted">shared · 2026-10-31 17:05:12</span>
+    </li>
+  
+    <li>
+      <a href="/box/234"><strong>mapfc</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:34</span>
+    </li>
+  
+    <li>
+      <a href="/box/233"><strong>mapf6</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:32</span>
+    </li>
+  
+    <li>
+      <a href="/box/232"><strong>mapf0</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:30</span>
+    </li>
+  
+    <li>
+      <a href="/box/231"><strong>mapea</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:27</span>
+    </li>
+  
+    <li>
+      <a href="/box/230"><strong>mape4</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:25</span>
+    </li>
+  
+    <li>
+      <a href="/box/229"><strong>mapde</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:23</span>
+    </li>
+  
+    <li>
+      <a href="/box/228"><strong>mapd8</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:21</span>
+    </li>
+  
+    <li>
+      <a href="/box/227"><strong>mapd2</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:19</span>
+    </li>
+  
+    <li>
+      <a href="/box/226"><strong>mapcc</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:17</span>
+    </li>
+  
+    <li>
+      <a href="/box/225"><strong>mapc6</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:15</span>
+    </li>
+  
+    <li>
+      <a href="/box/224"><strong>mapc0</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:13</span>
+    </li>
+  
+    <li>
+      <a href="/box/223"><strong>mapba</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:11</span>
+    </li>
+  
+    <li>
+      <a href="/box/222"><strong>mapb4</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:09</span>
+    </li>
+  
+    <li>
+      <a href="/box/221"><strong>mapae</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:07</span>
+    </li>
+  
+    <li>
+      <a href="/box/220"><strong>mapa8</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:05</span>
+    </li>
+  
+    <li>
+      <a href="/box/219"><strong>mapa2</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:03</span>
+    </li>
+  
+    <li>
+      <a href="/box/218"><strong>map9c</strong></a>
+      <span class="muted">private · 2026-10-31 17:04:01</span>
+    </li>
+  
+    <li>
+      <a href="/box/217"><strong>map96</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:59</span>
+    </li>
+  
+    <li>
+      <a href="/box/216"><strong>map90</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:57</span>
+    </li>
+  
+    <li>
+      <a href="/box/215"><strong>map8a</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:55</span>
+    </li>
+  
+    <li>
+      <a href="/box/214"><strong>map84</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:53</span>
+    </li>
+  
+    <li>
+      <a href="/box/213"><strong>map7e</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:51</span>
+    </li>
+  
+    <li>
+      <a href="/box/212"><strong>map78</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:49</span>
+    </li>
+  
+    <li>
+      <a href="/box/211"><strong>map72</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:47</span>
+    </li>
+  
+    <li>
+      <a href="/box/210"><strong>map6c</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:45</span>
+    </li>
+  
+    <li>
+      <a href="/box/209"><strong>map66</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:43</span>
+    </li>
+  
+    <li>
+      <a href="/box/208"><strong>map60</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:41</span>
+    </li>
+  
+    <li>
+      <a href="/box/207"><strong>map5a</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:39</span>
+    </li>
+  
+    <li>
+      <a href="/box/206"><strong>map54</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:37</span>
+    </li>
+  
+    <li>
+      <a href="/box/205"><strong>map4e</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:35</span>
+    </li>
+  
+    <li>
+      <a href="/box/204"><strong>map48</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:32</span>
+    </li>
+  
+    <li>
+      <a href="/box/203"><strong>map42</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:30</span>
+    </li>
+  
+    <li>
+      <a href="/box/202"><strong>map3c</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:28</span>
+    </li>
+  
+    <li>
+      <a href="/box/201"><strong>map36</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:26</span>
+    </li>
+  
+    <li>
+      <a href="/box/200"><strong>map30</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:24</span>
+    </li>
+  
+    <li>
+      <a href="/box/199"><strong>map2a</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:22</span>
+    </li>
+  
+    <li>
+      <a href="/box/198"><strong>map24</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:20</span>
+    </li>
+  
+    <li>
+      <a href="/box/197"><strong>map1e</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:18</span>
+    </li>
+  
+    <li>
+      <a href="/box/196"><strong>map18</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:16</span>
+    </li>
+  
+    <li>
+      <a href="/box/195"><strong>map12</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:14</span>
+    </li>
+  
+    <li>
+      <a href="/box/194"><strong>map0c</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:12</span>
+    </li>
+  
+    <li>
+      <a href="/box/193"><strong>map06</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:10</span>
+    </li>
+  
+    <li>
+      <a href="/box/192"><strong>map00</strong></a>
+      <span class="muted">private · 2026-10-31 17:03:08</span>
+    </li>
+  
+    <li>
+      <a href="/box/191"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:19</span>
+    </li>
+  
+    <li>
+      <a href="/box/190"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:16</span>
+    </li>
+  
+    <li>
+      <a href="/box/189"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:14</span>
+    </li>
+  
+    <li>
+      <a href="/box/188"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:12</span>
+    </li>
+  
+    <li>
+      <a href="/box/187"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:10</span>
+    </li>
+  
+    <li>
+      <a href="/box/186"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:08</span>
+    </li>
+  
+    <li>
+      <a href="/box/185"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:06</span>
+    </li>
+  
+    <li>
+      <a href="/box/184"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:04</span>
+    </li>
+  
+    <li>
+      <a href="/box/183"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:02</span>
+    </li>
+  
+    <li>
+      <a href="/box/182"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:02:00</span>
+    </li>
+  
+    <li>
+      <a href="/box/181"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:58</span>
+    </li>
+  
+    <li>
+      <a href="/box/180"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:56</span>
+    </li>
+  
+    <li>
+      <a href="/box/179"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:54</span>
+    </li>
+  
+    <li>
+      <a href="/box/178"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:52</span>
+    </li>
+  
+    <li>
+      <a href="/box/177"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:50</span>
+    </li>
+  
+    <li>
+      <a href="/box/176"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:48</span>
+    </li>
+  
+    <li>
+      <a href="/box/175"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:46</span>
+    </li>
+  
+    <li>
+      <a href="/box/174"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:44</span>
+    </li>
+  
+    <li>
+      <a href="/box/173"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:42</span>
+    </li>
+  
+    <li>
+      <a href="/box/172"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:40</span>
+    </li>
+  
+    <li>
+      <a href="/box/171"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:38</span>
+    </li>
+  
+    <li>
+      <a href="/box/170"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:36</span>
+    </li>
+  
+    <li>
+      <a href="/box/169"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:34</span>
+    </li>
+  
+    <li>
+      <a href="/box/168"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:32</span>
+    </li>
+  
+    <li>
+      <a href="/box/167"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:30</span>
+    </li>
+  
+    <li>
+      <a href="/box/166"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:28</span>
+    </li>
+  
+    <li>
+      <a href="/box/165"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:26</span>
+    </li>
+  
+    <li>
+      <a href="/box/164"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:24</span>
+    </li>
+  
+    <li>
+      <a href="/box/163"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:21</span>
+    </li>
+  
+    <li>
+      <a href="/box/162"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:19</span>
+    </li>
+  
+    <li>
+      <a href="/box/161"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:17</span>
+    </li>
+  
+    <li>
+      <a href="/box/160"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:15</span>
+    </li>
+  
+    <li>
+      <a href="/box/159"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:13</span>
+    </li>
+  
+    <li>
+      <a href="/box/158"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:11</span>
+    </li>
+  
+    <li>
+      <a href="/box/157"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:09</span>
+    </li>
+  
+    <li>
+      <a href="/box/156"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:07</span>
+    </li>
+  
+    <li>
+      <a href="/box/155"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:05</span>
+    </li>
+  
+    <li>
+      <a href="/box/154"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:03</span>
+    </li>
+  
+    <li>
+      <a href="/box/153"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:01:01</span>
+    </li>
+  
+    <li>
+      <a href="/box/152"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:59</span>
+    </li>
+  
+    <li>
+      <a href="/box/151"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:57</span>
+    </li>
+  
+    <li>
+      <a href="/box/150"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:55</span>
+    </li>
+  
+    <li>
+      <a href="/box/149"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:53</span>
+    </li>
+  
+    <li>
+      <a href="/box/148"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:51</span>
+    </li>
+  
+    <li>
+      <a href="/box/147"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:49</span>
+    </li>
+  
+    <li>
+      <a href="/box/146"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:47</span>
+    </li>
+  
+    <li>
+      <a href="/box/145"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:45</span>
+    </li>
+  
+    <li>
+      <a href="/box/144"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:43</span>
+    </li>
+  
+    <li>
+      <a href="/box/143"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:41</span>
+    </li>
+  
+    <li>
+      <a href="/box/142"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:39</span>
+    </li>
+  
+    <li>
+      <a href="/box/141"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:37</span>
+    </li>
+  
+    <li>
+      <a href="/box/140"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:35</span>
+    </li>
+  
+    <li>
+      <a href="/box/139"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:33</span>
+    </li>
+  
+    <li>
+      <a href="/box/138"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:31</span>
+    </li>
+  
+    <li>
+      <a href="/box/137"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:28</span>
+    </li>
+  
+    <li>
+      <a href="/box/136"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:26</span>
+    </li>
+  
+    <li>
+      <a href="/box/135"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:24</span>
+    </li>
+  
+    <li>
+      <a href="/box/134"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:22</span>
+    </li>
+  
+    <li>
+      <a href="/box/133"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:20</span>
+    </li>
+  
+    <li>
+      <a href="/box/132"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:18</span>
+    </li>
+  
+    <li>
+      <a href="/box/131"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:16</span>
+    </li>
+  
+    <li>
+      <a href="/box/130"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:14</span>
+    </li>
+  
+    <li>
+      <a href="/box/129"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:12</span>
+    </li>
+  
+    <li>
+      <a href="/box/128"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:10</span>
+    </li>
+  
+    <li>
+      <a href="/box/127"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:08</span>
+    </li>
+  
+    <li>
+      <a href="/box/126"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:06</span>
+    </li>
+  
+    <li>
+      <a href="/box/125"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:04</span>
+    </li>
+  
+    <li>
+      <a href="/box/124"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:02</span>
+    </li>
+  
+    <li>
+      <a href="/box/123"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 17:00:00</span>
+    </li>
+  
+    <li>
+      <a href="/box/122"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:58</span>
+    </li>
+  
+    <li>
+      <a href="/box/121"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:56</span>
+    </li>
+  
+    <li>
+      <a href="/box/120"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:54</span>
+    </li>
+  
+    <li>
+      <a href="/box/119"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:52</span>
+    </li>
+  
+    <li>
+      <a href="/box/118"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:50</span>
+    </li>
+  
+    <li>
+      <a href="/box/117"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:48</span>
+    </li>
+  
+    <li>
+      <a href="/box/116"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:46</span>
+    </li>
+  
+    <li>
+      <a href="/box/115"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:44</span>
+    </li>
+  
+    <li>
+      <a href="/box/114"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:42</span>
+    </li>
+  
+    <li>
+      <a href="/box/113"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:40</span>
+    </li>
+  
+    <li>
+      <a href="/box/112"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:38</span>
+    </li>
+  
+    <li>
+      <a href="/box/111"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:36</span>
+    </li>
+  
+    <li>
+      <a href="/box/110"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:33</span>
+    </li>
+  
+    <li>
+      <a href="/box/109"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:31</span>
+    </li>
+  
+    <li>
+      <a href="/box/108"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:29</span>
+    </li>
+  
+    <li>
+      <a href="/box/107"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:27</span>
+    </li>
+  
+    <li>
+      <a href="/box/106"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:25</span>
+    </li>
+  
+    <li>
+      <a href="/box/105"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:23</span>
+    </li>
+  
+    <li>
+      <a href="/box/104"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:21</span>
+    </li>
+  
+    <li>
+      <a href="/box/103"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:19</span>
+    </li>
+  
+    <li>
+      <a href="/box/102"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:17</span>
+    </li>
+  
+    <li>
+      <a href="/box/101"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:15</span>
+    </li>
+  
+    <li>
+      <a href="/box/100"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:13</span>
+    </li>
+  
+    <li>
+      <a href="/box/99"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:11</span>
+    </li>
+  
+    <li>
+      <a href="/box/98"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:09</span>
+    </li>
+  
+    <li>
+      <a href="/box/97"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:07</span>
+    </li>
+  
+    <li>
+      <a href="/box/96"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:05</span>
+    </li>
+  
+    <li>
+      <a href="/box/95"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:03</span>
+    </li>
+  
+    <li>
+      <a href="/box/94"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:59:01</span>
+    </li>
+  
+    <li>
+      <a href="/box/93"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:59</span>
+    </li>
+  
+    <li>
+      <a href="/box/92"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:57</span>
+    </li>
+  
+    <li>
+      <a href="/box/91"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:55</span>
+    </li>
+  
+    <li>
+      <a href="/box/90"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:53</span>
+    </li>
+  
+    <li>
+      <a href="/box/89"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:51</span>
+    </li>
+  
+    <li>
+      <a href="/box/88"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:49</span>
+    </li>
+  
+    <li>
+      <a href="/box/87"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:47</span>
+    </li>
+  
+    <li>
+      <a href="/box/86"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:45</span>
+    </li>
+  
+    <li>
+      <a href="/box/85"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:43</span>
+    </li>
+  
+    <li>
+      <a href="/box/84"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:40</span>
+    </li>
+  
+    <li>
+      <a href="/box/83"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:38</span>
+    </li>
+  
+    <li>
+      <a href="/box/82"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:36</span>
+    </li>
+  
+    <li>
+      <a href="/box/81"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:34</span>
+    </li>
+  
+    <li>
+      <a href="/box/80"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:32</span>
+    </li>
+  
+    <li>
+      <a href="/box/79"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:30</span>
+    </li>
+  
+    <li>
+      <a href="/box/78"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:28</span>
+    </li>
+  
+    <li>
+      <a href="/box/77"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:26</span>
+    </li>
+  
+    <li>
+      <a href="/box/76"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:24</span>
+    </li>
+  
+    <li>
+      <a href="/box/75"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:22</span>
+    </li>
+  
+    <li>
+      <a href="/box/74"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:20</span>
+    </li>
+  
+    <li>
+      <a href="/box/73"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:18</span>
+    </li>
+  
+    <li>
+      <a href="/box/72"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:16</span>
+    </li>
+  
+    <li>
+      <a href="/box/71"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:14</span>
+    </li>
+  
+    <li>
+      <a href="/box/70"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:12</span>
+    </li>
+  
+    <li>
+      <a href="/box/69"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:10</span>
+    </li>
+  
+    <li>
+      <a href="/box/68"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:08</span>
+    </li>
+  
+    <li>
+      <a href="/box/67"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:06</span>
+    </li>
+  
+    <li>
+      <a href="/box/66"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:04</span>
+    </li>
+  
+    <li>
+      <a href="/box/65"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:02</span>
+    </li>
+  
+    <li>
+      <a href="/box/64"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:58:00</span>
+    </li>
+  
+    <li>
+      <a href="/box/63"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:58</span>
+    </li>
+  
+    <li>
+      <a href="/box/62"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:56</span>
+    </li>
+  
+    <li>
+      <a href="/box/61"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:54</span>
+    </li>
+  
+    <li>
+      <a href="/box/60"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:52</span>
+    </li>
+  
+    <li>
+      <a href="/box/59"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:50</span>
+    </li>
+  
+    <li>
+      <a href="/box/58"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:48</span>
+    </li>
+  
+    <li>
+      <a href="/box/57"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:45</span>
+    </li>
+  
+    <li>
+      <a href="/box/56"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:43</span>
+    </li>
+  
+    <li>
+      <a href="/box/55"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:41</span>
+    </li>
+  
+    <li>
+      <a href="/box/54"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:39</span>
+    </li>
+  
+    <li>
+      <a href="/box/53"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:37</span>
+    </li>
+  
+    <li>
+      <a href="/box/52"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:35</span>
+    </li>
+  
+    <li>
+      <a href="/box/51"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:33</span>
+    </li>
+  
+    <li>
+      <a href="/box/50"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:31</span>
+    </li>
+  
+    <li>
+      <a href="/box/49"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:29</span>
+    </li>
+  
+    <li>
+      <a href="/box/48"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:27</span>
+    </li>
+  
+    <li>
+      <a href="/box/47"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:25</span>
+    </li>
+  
+    <li>
+      <a href="/box/46"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:23</span>
+    </li>
+  
+    <li>
+      <a href="/box/45"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:21</span>
+    </li>
+  
+    <li>
+      <a href="/box/44"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:19</span>
+    </li>
+  
+    <li>
+      <a href="/box/43"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:17</span>
+    </li>
+  
+    <li>
+      <a href="/box/42"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:15</span>
+    </li>
+  
+    <li>
+      <a href="/box/41"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:13</span>
+    </li>
+  
+    <li>
+      <a href="/box/40"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:11</span>
+    </li>
+  
+    <li>
+      <a href="/box/39"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:09</span>
+    </li>
+  
+    <li>
+      <a href="/box/38"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:07</span>
+    </li>
+  
+    <li>
+      <a href="/box/37"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:05</span>
+    </li>
+  
+    <li>
+      <a href="/box/36"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:03</span>
+    </li>
+  
+    <li>
+      <a href="/box/35"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:57:01</span>
+    </li>
+  
+    <li>
+      <a href="/box/34"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:59</span>
+    </li>
+  
+    <li>
+      <a href="/box/33"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:57</span>
+    </li>
+  
+    <li>
+      <a href="/box/32"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:55</span>
+    </li>
+  
+    <li>
+      <a href="/box/31"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:52</span>
+    </li>
+  
+    <li>
+      <a href="/box/30"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:50</span>
+    </li>
+  
+    <li>
+      <a href="/box/29"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:48</span>
+    </li>
+  
+    <li>
+      <a href="/box/28"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:46</span>
+    </li>
+  
+    <li>
+      <a href="/box/27"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:44</span>
+    </li>
+  
+    <li>
+      <a href="/box/26"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:42</span>
+    </li>
+  
+    <li>
+      <a href="/box/25"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:40</span>
+    </li>
+  
+    <li>
+      <a href="/box/24"><strong>t</strong></a>
+      <span class="muted">private · 2026-10-31 16:56:38</span>
+    </li>
+  
+    <li>
+      <a href="/box/23"><strong>weird sect</strong></a>
+      <span class="muted">private · 2026-10-31 16:54:49</span>
+    </li>
+  
+    <li>
+      <a href="/box/22"><strong>huge party</strong></a>
+      <span class="muted">private · 2026-10-31 16:54:46</span>
+    </li>
+  
+    <li>
+      <a href="/box/21"><strong>bad��</strong></a>
+      <span class="muted">private · 2026-10-31 16:54:44</span>
+    </li>
+  
+    <li>
+      <a href="/box/20"><strong><strong><strong>a</strong></strong></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:56</span>
+    </li>
+  
+    <li>
+      <a href="/box/19"><strong>[<strong>]a[</strong>]</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:54</span>
+    </li>
+  
+    <li>
+      <a href="/box/18"><strong><strong>a</strong><strong>b</strong></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:52</span>
+    </li>
+  
+    <li>
+      <a href="/box/17"><strong><span class="tag-sparkle">✨a✨</span><span class="tag-fire">🔥b</span></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:50</span>
+    </li>
+  
+    <li>
+      <a href="/box/16"><strong><strong>&amp;lt;script&amp;gt;</strong></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:48</span>
+    </li>
+  
+    <li>
+      <a href="/box/15"><strong><strong>&quot;&gt;&lt;script&gt;alert(5)&lt;/script&gt;</strong></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:46</span>
+    </li>
+  
+    <li>
+      <a href="/box/14"><strong>a<strong></strong>c</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:44</span>
+    </li>
+  
+    <li>
+      <a href="/box/13"><strong><span class="tag-heart">♥</span><strong>x</strong>[/heart]</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:42</span>
+    </li>
+  
+    <li>
+      <a href="/box/12"><strong><span class="tag-ball">◓</span>a[/pokeball]</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:40</span>
+    </li>
+  
+    <li>
+      <a href="/box/11"><strong><strong>a</span></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:38</span>
+    </li>
+  
+    <li>
+      <a href="/box/10"><strong><span class="tag-shiny"><strong>a</span></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:36</span>
+    </li>
+  
+    <li>
+      <a href="/box/9"><strong><strong><em>a</strong></em></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:34</span>
+    </li>
+  
+    <li>
+      <a href="/box/8"><strong>[B]a[/B]</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:32</span>
+    </li>
+  
+    <li>
+      <a href="/box/7"><strong>[b class=x]a</strong></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:30</span>
+    </li>
+  
+    <li>
+      <a href="/box/6"><strong>[shiny=x]a</span></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:28</span>
+    </li>
+  
+    <li>
+      <a href="/box/5"><strong></strong>a</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:26</span>
+    </li>
+  
+    <li>
+      <a href="/box/4"><strong><strong>a</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:24</span>
+    </li>
+  
+    <li>
+      <a href="/box/3"><strong><strong>a</strong></strong></a>
+      <span class="muted">private · 2026-10-31 16:51:22</span>
+    </li>
+  
+    <li>
+      <a href="/box/2"><strong>raw save test</strong></a>
+      <span class="muted">private · 2026-10-31 16:51:20</span>
+    </li>
+  
+    <li>
+      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
+      <span class="muted">shared · 2026-10-31 16:50:02</span>
+    </li>
+  
+  
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
+==== / (feed) ====
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>Shared boxes</h1>
+<p class="lead">Fresh teams from trainers around the world.</p>
+<ul class="feed">
+  
+    <li>
+      <a href="/box/242"><strong>beacon</strong></a>
+      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 17:21:50</span>
+      
+        <div class="feed-desc">d</div>
+      
+    </li>
+  
+    <li>
+      <a href="/box/241"><strong>team chant <span class="tag-fire">🔥live</span></strong></a>
+      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 17:08:45</span>
+      
+        <div class="feed-desc">my team chant</div>
+      
+    </li>
+  
+    <li>
+      <a href="/box/236"><strong>xsschant</strong></a>
+      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 17:05:38</span>
+      
+        <div class="feed-desc">d</div>
+      
+    </li>
+  
+    <li>
+      <a href="/box/235"><strong>xsschant</strong></a>
+      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 17:05:12</span>
+      
+        <div class="feed-desc">d</div>
+      
+    </li>
+  
+    <li>
+      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
+      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 16:50:02</span>
+      
+        <div class="feed-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</div>
+      
+    </li>
+  
+  
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
