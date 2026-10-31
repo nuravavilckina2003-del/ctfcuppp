@@ -1,6 +1,18 @@
-Traceback (most recent call last):
-  File "/home/runner/work/ctfcuppp/ctfcuppp/tools/task.py", line 33, in <module>
-    for form in ["[%s]X[/%s]"%t, "[%s=V]Y[/%s]"%t, "[%s V]Z[/%s]"%t]:
-                 ~~~~~~~~~~~~^~
-TypeError: not enough arguments for format string
-TASK EXIT 1
+MARKUP '[b]X[/b]' -> '<strong>X</strong>'
+MARKUP '[b=V]Y[/b]' -> '[b=V]Y</strong>'
+MARKUP '[b V]Z[/b]' -> '[b V]Z</strong>'
+MARKUP '[i]X[/i]' -> '<em>X</em>'
+MARKUP '[i=V]Y[/i]' -> '[i=V]Y</em>'
+MARKUP '[i V]Z[/i]' -> '[i V]Z</em>'
+MARKUP '[shiny]X[/shiny]' -> '<span class="tag-shiny">X</span>'
+MARKUP '[shiny=V]Y[/shiny]' -> '[shiny=V]Y</span>'
+MARKUP '[shiny V]Z[/shiny]' -> '[shiny V]Z</span>'
+MARKUP '[sparkle]X[/sparkle]' -> '<span class="tag-sparkle">✨X✨</span>'
+MARKUP '[sparkle=V]Y[/sparkle]' -> '[sparkle=V]Y✨</span>'
+MARKUP '[sparkle V]Z[/sparkle]' -> '[sparkle V]Z✨</span>'
+MARKUP '[fire]X[/fire]' -> '<span class="tag-fire">🔥X</span>'
+MARKUP '[fire=V]Y[/fire]' -> '[fire=V]Y</span>'
+MARKUP '[fire V]Z[/fire]' -> '[fire V]Z</span>'
+MARKUP '[pokeball]X[/pokeball]' -> '<span class="tag-ball">◓</span>X[/pokeball]'
+MARKUP '[heart]X[/heart]' -> '<span class="tag-heart">♥</span>X[/heart]'
+done
