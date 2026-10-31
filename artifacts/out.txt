@@ -1,8 +1,24 @@
-my boxes: 263 [1, 2, 3, 4, 5] ... [259, 260, 261, 262, 263]
-others: []
-box 261 comments:  <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><strong>@trainer01</strong> X</li> <li><stro
-   has ctf_bot: False
-box 262 comments:  <li class="muted">No comments yet.</li> 
-   has ctf_bot: False
-box 263 comments:  <li class="muted">No comments yet.</li> 
-   has ctf_bot: False
+== boxes title hash -> 303 0 text/html;charset=utf-8
+
+== boxes desc hash -> 303 0 text/html;charset=utf-8
+
+== boxes no save -> 400 7 text/html;charset=utf-8
+no file
+== settings bio hash -> 303 0 text/html;charset=utf-8
+
+== comment body hash -> 303 0 text/html;charset=utf-8
+
+== share id str -> 303 0 text/html;charset=utf-8
+
+== box id huge -> 404 11 text/html;charset=utf-8
+no such box
+== box id neg -> 404 11 text/html;charset=utf-8
+no such box
+== box id float -> 404 11 text/html;charset=utf-8
+no such box
+== u name weird -> 404 15 text/html;charset=utf-8
+no such trainer
+== register no pw -> 400 971 text/html;charset=utf-8
+<!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, initial-scale=1">   <title>PokéBox — share your box</title>   <link rel="stylesheet" href="/style.css"> </head> <body>   <header>     <a class="brand" href="/">📦 PokéBox</a>     <nav>       <a href="/">feed</a>                <a href="/boxes">my boxes</a>         <a href="/settings">settings</a>         <a class="who" href="/u/trainer01">@trainer01</a>         <a href="/logout">logout</a>            </nav>   </header>   <main>     <h1>Register</h1> <p class="error">fill both fields</p><form method="post" action="/register" class="card">   <label>Trainer name <input name="username" required></label>   <label>Password <input name="password" type="password" required></label>   <button>Create account</button> </form>    </main>   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer> </body> </html> 
+== login hash -> 401 956 text/html;charset=utf-8
+<!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, initial-scale=1">   <title>PokéBox — share your box</title>   <link rel="stylesheet" href="/style.css"> </head> <body>   <header>     <a class="brand" href="/">📦 PokéBox</a>     <nav>       <a href="/">feed</a>                <a href="/boxes">my boxes</a>         <a href="/settings">settings</a>         <a class="who" href="/u/trainer01">@trainer01</a>         <a href="/logout">logout</a>            </nav>   </header>   <main>     <h1>Login</h1> <p class="error">bad credentials</p><form method="post" action="/login" class="card">   <label>Trainer name <input name="username" required></label>   <label>Password <input name="password" type="password" required></label>   <button>Log in</button> </form>    </main>   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer> </body> </html> 
