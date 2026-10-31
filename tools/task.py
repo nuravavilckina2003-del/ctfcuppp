@@ -30,7 +30,7 @@ except Exception:
 tags="b i u s code quote spoiler url img color size center left right font table tr td list hr br p div script style iframe svg marquee a link mention user shiny sparkle fire pokeball heart ball star ice water electric grass psychic dragon dark fairy normal fighting poison ground flying bug rock ghost steel".split()
 results={}
 for t in tags:
-    for form in ["[%s]X[/%s]"%t, "[%s=V]Y[/%s]"%t, "[%s V]Z[/%s]"%t]:
+    for form in [f"[{t}]X[/{t}]", f"[{t}=V]Y[/{t}]", f"[{t} V]Z[/{t}]"]:
         r=s.post(BASE+"/boxes",data={"title":"t","description":form},files={'save':('x.sav',sv)},timeout=30,allow_redirects=False)
         if r.status_code!=303: 
             log("FAIL",form,r.status_code); continue
