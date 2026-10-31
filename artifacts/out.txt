@@ -1,15 +1,14 @@
-new box 285
-after share main:  <div class="trainer-card"> <h1>flash test</h1> <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p> <p class="box-desc">d</p> <dl class="trainer-stats"> <div><dt>Trainer</dt><dd></dd></div> <div><dt>ID No.</dt><dd>12345</dd></div> <div><dt>Gender</dt><dd>Boy</dd></div> <div><dt>Play time</dt><dd>0:00:00</dd></div> <div><dt>Party</dt><dd>1/6</dd></div> </dl> <h2>Party</h2> <ol class="party-list"> <li> <span class="nick">PIKA</span> <span class="lv">Lv50</span> <span class="hp">HP 0/0</span> </li> </ol> <h2>Team chant</h2> <p class="muted">Your Pokémon's nicknames, shouted toget
-any token-ish: []
-flash cookie? [('rack.session', 'AiOyb97LBhKiktUdB35Lks%2BoS0m8qq%2BPOcA8lPud%2BG4MnatygjWhA%2FVurhc2qdr9kFNkdMniKkPw6WoWUv1aY9pjvW4RF%2B1s4Rtx8Q5%2BOKmm%2BeyJ4M8G2ee2C3a46iABPWoX%2FjacidAYmBNHvcTIs3p1afjLHdEG856A0kY9P27ANfVEQj6mtiZTrtOp2qUJ%2FU1ai%2FEsZtdX69vymzzAOWpYO3Ya4U0Y9k8XHNsSS3diXT82OIPXcDNWhDLRMpT4XwOe94v77ElXa%2BYM1mz%2FuDzIllQYzz4wcvASDbWw2HtEGbYJZjYOW3RGPuXA2%2FHNT8HRQQsp%2BWsyxax28zznqajvvrMkkBb5AoDzflZrLS0jGLVwjf5%2F1zJrRvax'), ('rack.session', 'AoaxKCNx1BpnSu6QhRjdqauHJEJPTV4yxyTixt0YHZ7JcUNbCbPuRgm1fXqcouNHYmcFVwc%2B4EF1I0g8foGFmrIzoPoFySCC%2BvtQBCZBvSOQsYLWwczbglEZkzkhY7frv3%2FgPaqgEg5MOZc9tTAF4htZPsqVqzM8iBRrSG88zCGns29meurIDmh1rbdI%2BCZhj2KpAjYwSBpU020FJVkp6y%2BqDl5LIa93EErN0tfHUa2vLC0IVt8fopLpilVu4I6GnekkrEazFhXUF7qk11p3sQxv%2FpevzUsS4iaoiiF0v8DR0i2dHQ93CkDdjWjI6QeR4PI7qJHhbAPW6IjlSJ%2BbAVlhviDLRxt%2FAtzvGcilIuRIiTwY8jvnHFpua%2FLW')]
-Traceback (most recent call last):
-  File "/home/runner/work/ctfcuppp/ctfcuppp/tools/exploit.py", line 48, in <module>
-    log("cookie len",len(s.cookies.get('rack.session','')))
-                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/cookies.py", line 225, in get
-    return self._find_no_duplicates(name, domain, path)
-           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/cookies.py", line 444, in _find_no_duplicates
-    raise CookieConflictError(
-requests.cookies.CookieConflictError: There are multiple cookies with name, 'rack.session'
-TASK EXIT 1
+== save=string -> 500 30
+<h1>Internal Server Error</h1>
+== dup save -> 303 0
+
+== save[x] -> 303 0
+
+== title[] -> 303 0
+
+== dup body -> 303 0
+
+== dup login -> 401 956
+<!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, initial-scale=1">   <title>PokéBox — share your box</title>   <link rel="stylesheet" href="/style.css"> </head> <body>   <header>     <a class="brand" href="/">📦 PokéBox</a>     <nav>       <a href="/">feed</a>                <a href="/boxes">my boxes</a>         <a href="/settings">settings</a>         <a class="who" href="/u/trainer01">@trainer01</a>         <a href="/logout">logout</a>            </nav>   </header>   <main>     <h1>Login</h1> <p class="error">bad credentials</p><form method="post" action="/login" class="card">   <label>Trainer name <input name="username" required></label>   <label>Password <input name="password" type="password" required></label>   <button>Log in</button> </form>    </main>   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer> </body> </html> 
+== reg arr -> 303 0
+
