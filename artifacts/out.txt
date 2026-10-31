@@ -1,45 +1,194 @@
 cookie loaded
-/users -> 404 len 18 '<h1>Not Found</h1>'
-/api -> 404 len 18 '<h1>Not Found</h1>'
-/api/boxes -> 404 len 18 '<h1>Not Found</h1>'
-/api/users -> 404 len 18 '<h1>Not Found</h1>'
-/admin/users -> 404 len 18 '<h1>Not Found</h1>'
-/admin -> 404 len 18 '<h1>Not Found</h1>'
-/report -> 404 len 18 '<h1>Not Found</h1>'
-/bot -> 404 len 18 '<h1>Not Found</h1>'
-/flag -> 404 len 18 '<h1>Not Found</h1>'
-/flag.txt -> 404 len 18 '<h1>Not Found</h1>'
-/debug -> 404 len 18 '<h1>Not Found</h1>'
-/health -> 404 len 18 '<h1>Not Found</h1>'
-/stats -> 404 len 18 '<h1>Not Found</h1>'
-/profile -> 404 len 18 '<h1>Not Found</h1>'
-/me -> 404 len 18 '<h1>Not Found</h1>'
-/account -> 404 len 18 '<h1>Not Found</h1>'
-/logout -> 302 len 0 ''
-/box/1.json -> 404 len 11 'no such box'
-/box/1.txt -> 404 len 11 'no such box'
-/box/1?format=json -> 200 len 1951 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="viewport" content="width=device-width, initial-scale=1">\n  <title>PokéBox — share'
-/box/1/edit -> 404 len 18 '<h1>Not Found</h1>'
-/box/1/delete -> 404 len 18 '<h1>Not Found</h1>'
-/export -> 404 len 18 '<h1>Not Found</h1>'
-/import -> 404 len 18 '<h1>Not Found</h1>'
-user admin -> 404 MISS []
-user administrator -> 404 MISS []
-user moderator -> 404 MISS []
-user mod -> 404 MISS []
-user oak -> 404 MISS []
-user professor -> 404 MISS []
-user red -> 404 MISS []
-user ash -> 404 MISS []
-user blue -> 404 MISS []
-user cynthia -> 404 MISS []
-user champion -> 404 MISS []
-user trainer -> 404 MISS []
-user staff -> 404 MISS []
-user support -> 404 MISS []
-user bot -> 404 MISS []
-user flag -> 404 MISS []
-user pokebox -> 404 MISS []
-user admin1 -> 404 MISS []
-user root -> 404 MISS []
-user Agent -> 404 MISS []
+-- invalid utf8 title 303 len 0
+
+-- box 200 len 1854
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <div class="trainer-card">
+  <h1>bad��</h1>
+  <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
+
+  
+    <p class="box-desc">d�</p>
+  
+
+  <dl class="trainer-stats">
+    <div><dt>Trainer</dt><dd>       </dd></div>
+    <div><dt>ID No.</dt><dd>12345</dd></div>
+    <div><dt>Gender</dt><dd>Boy</dd></div>
+    <div><dt>Play time</dt><dd>0:00:00</dd></div>
+    <div><dt>Party</dt><dd>1/6</dd></div>
+  </dl>
+
+  <h2>Party</h2>
+  <ol class="party-list">
+    
+      <li>
+        <span class="nick">          </span>
+        <span class="lv">Lv0</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+  </ol>
+
+  <h2>Team chant</h2>
+  <p class="muted">Your Pokémon's nicknames, shouted together as the team's battle cry:</p>
+  <p class="card-line">A wild cheer erupts:           !</p>
+</div>
+
+  <form method="post" action="/box/21/share">
+    <button>Share to the feed</button>
+  </form>
+
+<h2>Comments</h2>
+<ul class="comments">
+  
+ 
+-- invalid utf8 comment 303 len 0
+
+-- box1 200 len 1999
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <div class="trainer-card">
+  <h1>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</h1>
+  <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
+
+  
+    <p class="box-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</p>
+  
+
+  <dl class="trainer-stats">
+    <div><dt>Trainer</dt><dd>AGENT</dd></div>
+    <div><dt>ID No.</dt><dd>12345</dd></div>
+    <div><dt>Gender</dt><dd>Boy</dd></div>
+    <div><dt>Play time</dt><dd>0:00:00</dd></div>
+    <div><dt>Party</dt><dd>1/6</dd></div>
+  </dl>
+
+  <h2>Party</h2>
+  <ol class="party-list">
+    
+      <li>
+        <span class="nick">PIKA</span>
+        <span class="lv">Lv50</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+  </ol>
+
+  <h2>Team chant</h2>
+  <p class="muted">Your Pokémon's nicknames, shouted together as the team's battle cry:</p>
+  <p class="card-line">A wild cheer erupts: PIKA!</p>
+</div>
+
+
+<h2>Comments</h2>
+<ul
+-- huge party upload 303 len 0
+
+-- huge party box 200 len 2648
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <div class="trainer-card">
+  <h1>huge party</h1>
+  <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
+
+  
+    <p class="box-desc">x</p>
+  
+
+  <dl class="trainer-stats">
+    <div><dt>Trainer</dt><dd>       </dd></div>
+    <div><dt>ID No.</dt><dd>12345</dd></div>
+    <div><dt>Gender</dt><dd>Boy</dd></div>
+    <div><dt>Play time</dt><dd>0:00:00</dd></div>
+    <div><dt>Party</dt><dd>6/6</dd></div>
+  </dl>
+
+  <h2>Party</h2>
+  <ol class="party-list">
+    
+      <li>
+        <span class="nick">          </span>
+        <span class="lv">Lv0</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+      <li>
+        <span class="nick">          </span>
+        <span class="lv">Lv0</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+      <li>
+        <span class="nick">          </span>
+        <span class="lv">Lv0</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+      <li>
+        <span class=
+-- weird section upload 303 len 0
+
+-- no file 400 len 7
+no file
