@@ -10,7 +10,7 @@ import socket, struct, sys, time
 HOST = sys.argv[1] if len(sys.argv) > 1 else "instances.ctfcup.online"
 PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 1337
 
-TOKENS = ["BTG0ZSUL8I78E6C0M650RT6ZIXAS7M3Z",
+TOKENS = ["5CYH8BZ95GHQV3IYLDJS83X0HIXSSQTG",
           "PS5MK0X1VA8DHSIIOUTG62FRCY9T3FCI"]
 
 

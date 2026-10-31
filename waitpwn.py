@@ -9,7 +9,7 @@ also tells you *why*: refused / closed at once / silent / answered.
 """
 import socket, struct, sys, time
 
-HOST, PORT, TOKEN = "instances.ctfcup.online", 1337, "BTG0ZSUL8I78E6C0M650RT6ZIXAS7M3Z"
+HOST, PORT, TOKEN = "instances.ctfcup.online", 1337, "5CYH8BZ95GHQV3IYLDJS83X0HIXSSQTG"
 EVERY, TOTAL = 30, 30          # seconds between attempts, minutes overall
 W = H = 4
 S = W * H * 3

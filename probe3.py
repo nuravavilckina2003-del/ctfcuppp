@@ -5,7 +5,7 @@ import socket, struct, sys, time
 
 HOST = sys.argv[1] if len(sys.argv) > 1 else "instances.ctfcup.online"
 PORT = int(sys.argv[2]) if len(sys.argv) > 2 else 1337
-TOKEN = sys.argv[3] if len(sys.argv) > 3 else "BTG0ZSUL8I78E6C0M650RT6ZIXAS7M3Z"
+TOKEN = sys.argv[3] if len(sys.argv) > 3 else "5CYH8BZ95GHQV3IYLDJS83X0HIXSSQTG"
 
 
 def http_req():

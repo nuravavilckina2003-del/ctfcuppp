@@ -2,7 +2,7 @@
 """Local imitation of the ctfcup instance wrapper (for testing only)."""
 import socket, sys, threading, time
 
-TOKEN = "BTG0ZSUL8I78E6C0M650RT6ZIXAS7M3Z"
+TOKEN = "5CYH8BZ95GHQV3IYLDJS83X0HIXSSQTG"
 LPORT, BACK = int(sys.argv[1]), int(sys.argv[2])
 
 
