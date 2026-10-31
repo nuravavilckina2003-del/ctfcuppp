@@ -1,5 +1,9 @@
-cookie loaded
--- feed 200 len 1153
+-- register evil 303 len 0
+
+-- login evil 303 len 0
+
+cookies {'rack.session': 'Auq%2FbiA90xHhxxhXfTEg%2BY6J8iu%2B7KmP3knQXBrC%2FcJEhbtaKOXof7%2BZkCcXCVocMwLMy6YupO7tcFm17GNQaLv38%2F3kho8YRhc6Mux7ljm0J%2FkQZ41h2P1PWjJSoxyxZKss7NwawWkQUAsfuobQvh%2BvpUs3OjwUneYHoykcqDBk7jAi729Sqr4ZyLoaOQE1W7Ss5FyzbV88oXc5aHnm67w%2FqZPinOrgzfS6Utqw1yPGSBTL%2FWHWc56EFFmcoP7ED1QCuPNEQ%2Bo19oc3xcAc%2BjuG2SgQ1gHSA2mDV%2B%2B9ZKY42WBvfiJuY%2FHvxFQjtaYx3v27ygIaRTZ4Wy8QfSVHh2aXu71zBlzENm2O%2FDLXa4BNsnMg4MDEqGIufo7e'}
+-- boxes evil 200 len 1573
 <!doctype html>
 <html lang="en">
 <head>
@@ -16,25 +20,26 @@ cookie loaded
       
         <a href="/boxes">my boxes</a>
         <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a class="who" href="/u/&lt;img src=x onerror=alert(9)&gt;">@&lt;img src=x onerror=alert(9)&gt;</a>
         <a href="/logout">logout</a>
       
     </nav>
   </header>
   <main>
-    <h1>Shared boxes</h1>
-<p class="lead">Fresh teams from trainers around the world.</p>
+    <h1>My boxes</h1>
+<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
+  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
+  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
+  <label>Gen III save (.sav) <input type="file" name="save" required></label>
+  <button>Import box</button>
+</form>
+<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
+   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
+   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
+   <a href="/settings">bio</a> too.</p>
 <ul class="feed">
   
-    <li>
-      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
-      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 16:50:02</span>
-      
-        <div class="feed-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</div>
-      
-    </li>
-  
-  
+  <li class="muted">No boxes yet — import a save above.</li>
 </ul>
 
   </main>
@@ -42,7 +47,7 @@ cookie loaded
 </body>
 </html>
 
--- profile 200 len 1233
+-- profile evil 200 len 979
 <!doctype html>
 <html lang="en">
 <head>
@@ -59,27 +64,22 @@ cookie loaded
       
         <a href="/boxes">my boxes</a>
         <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a class="who" href="/u/&lt;img src=x onerror=alert(9)&gt;">@&lt;img src=x onerror=alert(9)&gt;</a>
         <a href="/logout">logout</a>
       
     </nav>
   </header>
   <main>
     <div class="trainer-card">
-  <h1>@trainer01</h1>
+  <h1>@&lt;img src=x onerror=alert(9)&gt;</h1>
   
-    <p class="box-desc">bio &lt;script&gt;alert(4)&lt;/script&gt; <em>it</em> <span class="tag-ball">◓</span>p[/pokeball] <span class="tag-heart">♥</span>h[/heart] <span class="tag-fire">🔥f</span> <span class="tag-sparkle">✨sp✨</span></p>
+    <p class="muted">This trainer hasn't written a bio yet.</p>
   
 </div>
 <h2>Shared boxes</h2>
 <ul class="feed">
   
-    <li>
-      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
-      <span class="muted">2026-10-31 16:50:02</span>
-    </li>
-  
-  
+  <li class="muted">No shared boxes yet.</li>
 </ul>
 
   </main>
@@ -87,17 +87,7 @@ cookie loaded
 </body>
 </html>
 
--- GET /box/%3Cscript%3Ealert(1)%3C/script%3E 404 len 18
-<h1>Not Found</h1>
--- GET /box/abc 404 len 11
-no such box
--- GET /u/%3Cscript%3E 404 len 15
-no such trainer
--- GET /box/-1 404 len 11
-no such box
--- GET /box/0 404 len 11
-no such box
--- bad login 401 len 956
+-- profile evil2 200 len 979
 <!doctype html>
 <html lang="en">
 <head>
@@ -114,16 +104,55 @@ no such box
       
         <a href="/boxes">my boxes</a>
         <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a class="who" href="/u/&lt;img src=x onerror=alert(9)&gt;">@&lt;img src=x onerror=alert(9)&gt;</a>
         <a href="/logout">logout</a>
       
     </nav>
   </header>
   <main>
-    <h1>Login</h1>
-<p class="error">bad credentials</p><form method="post" action="/login" class="card">
-  <label>Trainer name <input name="username" r
--- bad register 303 len 0
+ 
+-- register evil2 303 len 0
 
-set bio 303
-BIO RENDER RAW: '<div class="trainer-card">\n  <h1>@trainer01</h1>\n  \n    <p class="box-desc">[url]T[/url] | [link]T[/link] | [a]T[/a] | [img]T[/img] | [color]T[/color] | [size]T[/size] | [u]T[/u] | [s]T[/s] | [code]T[/code] | [quote]T[/quote] | [center]T[/center] | [youtube]T[/youtube] | [email]T[/email] | [mention]T[/mention] | [user]T[/user] | <strong>T</strong> | <em>T</em> | <span class="tag-shiny">T</span> | [spa</p>\n  \n</div>'
+-- login evil2 303 len 0
+
+-- boxes evil2 200 len 1579
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/&quot;&gt;&lt;svg onload=alert(1)&gt;">@&quot;&gt;&lt;svg onload=alert(1)&gt;</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>My boxes</h1>
+<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
+  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
+  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
+  <label>Gen III save (.sav) <input type="file" name="save" required></label>
+  <button>Import box</button>
+</form>
+<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
+   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
+   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
+   <a href="/settings">bio</a> too.</p>
+<ul class="feed">
+  
+  <li class="muted">No boxes yet — import a save above.</li>
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off
