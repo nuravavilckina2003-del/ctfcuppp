@@ -1,11 +1,31 @@
-==================== / ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/ -> 200
+no cookie [Errno 2] No such file or directory: 'artifacts/cookie.txt'
+=============== GET /boxes (before login) ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 302 len 0
+H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/login
 H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AokXf8pKKarpcj9ZyhdhyIMRm82XtqRgZ0DF9w%2BYzjQMQwDTQNoRtBnOkXC97WZpijMK1S1hFeq7B9dZJWU3%2BLKu8geKSv5FwsHr4cocvn%2Fwtt%2FeY2Cmlne6bjO6RZ17WSc08jN36vWfMCjqHP09HKOOaWorsJ%2FW4O5qdkq8e81ZjZSZNEP%2Fe1dqnC%2BD5yh0QHMcpRrzJ0BC3%2BITFj6yNBxcChAxiWjtrxfWZwcBapyTPfAPRlI557O1jm5kZo6IjwOEKpmEHtLKDkXeJEui16asHpNhFli0zJf7cFLElFy5FIhKyBz23fXaTKArAmPkLTedPblPiEsnIwVQlMJsRHSIgW%2BGqG7vzQbTg9TjL%2BZDHv09Yp6yo9L6y17F; path=/; httponly
-H Content-Length: 758
+H set-cookie: rack.session=AvJarrJdz5vraM8gXfNArk6L4%2BP9ZsNdLwN4pxyHZ7O9aCc6GimjtNbhh3y6GXQ%2Bngu3jO5ooYXOfXhtiLvX%2BK1RpIzOVJLPnvZjS
+
+
+=============== POST /register ===============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/register -> 303 len 0
+H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes
+H content-type: text/html;charset=utf-8
+H set-cookie: rack.session=Al41%2FfR3aorczNGZkwZtxGTdRd8xQ2KIr%2BcBAUe41YA8OM5jXENqiBcdEQvVSELLm%2BRMFmFDbtrHU90o2Jyg5rCTXjhuMqzKzAVmV
+
+
+cookies: {'rack.session': 'Al41%2FfR3aorczNGZkwZtxGTdRd8xQ2KIr%2BcBAUe41YA8OM5jXENqiBcdEQvVSELLm%2BRMFmFDbtrHU90o2Jyg5rCTXjhuMqzKzAVmVarZ3KdQ3zdQ68QycnoI0k%2FEY%2B%2BHUHODQSwFv%2Fnnvr91lQRiRe8BF1J7NbQhk3vKsMwpLOL2k8cJ%2BGkB%2BMfvC4QLJEXjHT2roIUyRo%2BkJvVHFxJzFD9P%2FX4zZoLXvEqIACtMZB%2B4qNUkgz0Qz6Ih2%2Fvwk5E8yk4Z8snyuMI1tgSDS1kDafex%2BCJIE59jtDTikeWEz8yKklR1gM1%2BQ5QPA1y1xsb6h2t2k05QZDc1Fw2obbdDMGkC6fkig3K7DoQEMGCG%2B4TxUnXWQU%2F%2FeGP2ILXP'}
+=============== POST /login ===============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/login -> 303 len 0
+H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes
+H content-type: text/html;charset=utf-8
+H set-cookie: rack.session=AmrfXgjN44joK105lBWcozhYM2ewNBuqF9TGhOBccfqO%2BW2DpKwr%2FbkeVEkasu%2BDTnl2hv7CUnsCmN4Vp1ED4T2lgr9UBwuKjaTXZ
+
+
+cookies: {'rack.session': 'AmrfXgjN44joK105lBWcozhYM2ewNBuqF9TGhOBccfqO%2BW2DpKwr%2FbkeVEkasu%2BDTnl2hv7CUnsCmN4Vp1ED4T2lgr9UBwuKjaTXZRqNMPUvEzAlJls6HaUUR8mkgi9YToOynmXfjWlvg7cDiHOgR4vKtmu%2FcdKzpGZ60aoDQap66Fmzflhf%2FlXqXfzoA%2B5EWmDZouw8Uvj5ncSa4zsTHfdy%2BCeHeL5tB85UE%2B1YtiZ5s2SWQmWeGc3MT%2BnnOUd1L%2BK8FObfCcskX8Jo%2B1MfqWhTGzB4uLGvyGQ6FTp8LMtIX0sQ%2BarxOAE5iJcJm093tVINsCagjvzXBGa09lflt%2BNBPQAlAL%2FmBKsxQ5DavTH41zqy5yWpZqntQmtZ'}
+=============== GET /boxes ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 200 len 1523
+H content-type: text/html;charset=utf-8
+H set-cookie: rack.session=Ak6Fl8ayy%2F%2FaYHDa0eeXUIRx8uBJ6WKYG48KqEcDX8JQ5FoMFqE%2Bh9XmWpL19SCP6F5zoQ%2F2uceUSXTc53XC8%2FePmVjKFq6gt
 <!doctype html>
 <html lang="en">
 <head>
@@ -20,17 +40,28 @@ H Content-Length: 758
     <nav>
       <a href="/">feed</a>
       
-        <a href="/login">login</a>
-        <a href="/register">register</a>
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
       
     </nav>
   </header>
   <main>
-    <h1>Shared boxes</h1>
-<p class="lead">Fresh teams from trainers around the world.</p>
+    <h1>My boxes</h1>
+<form method="post" action="/boxes" enctype="multipart/form-data" class="card">
+  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
+  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
+  <label>Gen III save (.sav) <input type="file" name="save" required></label>
+  <button>Import box</button>
+</form>
+<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
+   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
+   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
+   <a href="/settings">bio</a> too.</p>
 <ul class="feed">
   
-  <li class="muted">No shared boxes yet. Be the first!</li>
+  <li class="muted">No boxes yet — import a save above.</li>
 </ul>
 
   </main>
@@ -39,201 +70,27 @@ H Content-Length: 758
 </html>
 
 
-==================== /login ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/login -> 200
+=============== GET /boxes/new ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes/new -> 404 len 18
 H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=Av3ia0CM%2FTbjSTtGJebPCJhPK2hGs1S3bjFvJT1lPqJOk7aF5YjA%2FBcLLUr1Ri5OTI85uHm3apGOazqrgJdw0ixZaysZgv59jrm1VpsyMNgwkiDAC2tRuZYeWlRyHrtPW%2FyOl7LNarlHrTlqb%2FwQ9%2B7dbn5xG1UVv7XHdpQA57LS5sPbwj1wgG9kPMI5bbmPyJeJYVygeOLXLiyAsyww5Qsunmr6svyquhlSCI0xQ%2B0iLmNm%2BTcfXCpdt%2FfASKwfdwqACxkiuFwt5W7J%2BhVrToKnr7mV6b%2FCd7zohJ%2FreaTexJ6URg%2BycyMI8DxK9WOJa5sVcvPtbcT79KQE9wZmLp%2FsEorbM7mI%2Fbw5BfgcSLzzD0jz5F36dGPXkde7; path=/; httponly
-H Content-Length: 822
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/login">login</a>
-        <a href="/register">register</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>Login</h1>
-<form method="post" action="/login" class="card">
-  <label>Trainer name <input name="username" required></label>
-  <label>Password <input name="password" type="password" required></label>
-  <button>Log in</button>
-</form>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-==================== /register ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/register -> 200
-H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AqRbzBOQSxNM8Gl66mIsggzECgiUg%2BGHa%2FhRHv2Hpzh05eQhzxmgaCReu2HkD3H0gOPLlTfOjUPqKViVUwnfG%2BzGqlFnfOAeqNl0MKSgRxPPBoe7mVryx%2BVhfLndKsDwPD%2FWLRQyfXHPa2q3yISb0%2B9AJscB2GrYSkg16dPA0upUVBCnOW8FMBIEzOnqmEz8YLMMN5G7L09R94CPIpMzywhKyiYhw%2Blil0K3luGj6EmM8oZLqOpvsA2%2BmVEUTFR5c63eZ%2Bg8aBeMTteAIYHfpsALgJRovTOmAB%2F%2F%2BLErK42CHnIzwshjQEGyuGxt8Xx7X7%2FUx0FOCN9HVja0DU5e5uQZeLRpwn%2Bzbyrz1tHNeb33jq3wK8%2BlkNH7bKGG; path=/; httponly
-H Content-Length: 836
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/login">login</a>
-        <a href="/register">register</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>Register</h1>
-<form method="post" action="/register" class="card">
-  <label>Trainer name <input name="username" required></label>
-  <label>Password <input name="password" type="password" required></label>
-  <button>Create account</button>
-</form>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-==================== /style.css ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/style.css -> 200
-H content-type: text/css;charset=utf-8
-H last-modified: Thu, 29 Oct 2026 23:50:46 GMT
-H x-content-type-options: nosniff
-H set-cookie: rack.session=Ako0bL8ZFG%2FKxZbr80Ukh65k1U5WnSYySGd9Oz37d3huhPwJluudBFxGLXUvLL4r%2BryV36zQE6xM7w1JFl0ulvGy6QCbeOs73IOmYcn2VkoLzXH8sqUENPx4W2neOZOTsqiaLc6M9aj%2BuwIjkXc%2Fetc9VfP%2Fn1ov4nZGoIQejmp6uKTNC2UCtDdHeV%2FNiLFe1mIOSG3L30dNuBrZJqHlrQwe9qZj8jmPKFrBIV7uK62AXYCji7xgyCpBjrE4L%2FdKMDPENTVAg0VbG0AgP4xbdcgaS3yHz6mnFJyR96rJHwpWIIYbBWtRI%2BBcmYSN0wStti45Eo76URtuoswlNvQEjeLfixAqvMi9zmbqAjjXTJNtEcHBIKlOg2y%2BgsXA; path=/; httponly
-H Content-Length: 3339
-:root { --bg:#f4f6fb; --card:#fff; --ink:#1c2430; --muted:#7a869a; --accent:#e3350d; --line:#e2e8f0; }
-* { box-sizing:border-box; }
-body { margin:0; font:16px/1.5 system-ui, sans-serif; color:var(--ink); background:var(--bg); }
-header { display:flex; gap:1rem; align-items:center; padding:.8rem 1.2rem; background:var(--card); border-bottom:1px solid var(--line); }
-.brand { font-weight:700; text-decoration:none; color:var(--accent); font-size:1.2rem; }
-nav { margin-left:auto; display:flex; gap:1rem; align-items:center; }
-nav a { text-decoration:none; color:var(--ink); }
-.who { color:var(--muted); }
-main { max-width:720px; margin:1.5rem auto; padding:0 1rem; }
-footer { max-width:720px; margin:2rem auto; padding:1rem; color:var(--muted); font-size:.9rem; }
-h1 { margin:.2rem 0; }
-.lead, .muted { color:var(--muted); }
-.card { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:1rem; display:flex; flex-direction:column; gap:.7rem; margin:1rem 0; }
-.card label { display:flex; flex-direction:column; gap:.3rem; font-size:.9rem; }
-input { padding:.5rem; border:1px solid var(--line); border-radius:8px; font:inherit; }
-button { padding:.5rem 1rem; border:0; border-radius:8px; background:var(--accent); color:#fff; font:inherit; cursor:pointer; }
-.feed, .comments { list-style:none; padding:0; }
-.feed li, .comments li { padding:.6rem 0; border-bottom:1px solid var(--line); }
-.error { color:var(--accent); font-weight:600; }
-.trainer-card { background:var(--card); border:1px solid var(--line); border-radius:14px; padding:1.2rem; }
-.party { display:flex; flex-wrap:wrap; gap:.5rem; list-style:none; padding:0; }
-.party li { background:var(--bg); border:1px solid var(--line); border-radius:999px; padding:.3rem .8rem; }
-.nick { font-weight:600; }
-.chant-raw { font-family:ui-monospace, monospace; background:#111827; color:#e5e7eb; padding:.6rem .8rem; border-radius:8px; overflow-x:auto; }
-.card-line { font-size:1.1rem; font-style:italic; }
-
-/* card-markup tags */
-.tag-shiny { background:linear-gradient(90deg,#f6d365,#fda085); -webkit-background-clip:text; background-clip:text; color:transparent; font-weight:700; }
-.tag-sparkle { color:#eab308; }
-.tag-fire { color:#ef4444; font-weight:600; }
-.tag-ball { color:var(--accent); }
-.tag-heart { color:#ec4899; }
-.box-desc { font-size:1.05rem; margin:.4rem 0 1rem; }
-.feed-desc { color:var(--ink); font-size:.95rem; margin-top:.2rem; }
-code { background:#eef2f7; padding:.05rem .3rem; border-radius:4px; font-size:.85em; }
-
-.trainer-stats { display:grid; grid-template-columns:repeat(auto-fit,minmax(120px,1fr)); gap:.6rem; margin:1rem 0; }
-.trainer-stats div { background:var(--bg); border:1px solid var(--line); border-radius:8px; padding:.5rem .7rem; }
-.trainer-stats dt { font-size:.72rem; text-transform:uppercase; letter-spacing:.04em; color:var(--muted); }
-.trainer-stats dd { margin:.15rem 0 0; font-weight:600; }
-.party-list { list-style:none; padding:0; display:flex; flex-direction:column; gap:.4rem; 
-...[truncated 3339 bytes]
-
-==================== /robots.txt ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/robots.txt -> 404
-H x-cascade: pass
-H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AllSRkGqjhCNBUn7M75Z6CNfOEQY5ATgEvOT77MPmThnOI%2Flsda4d0DKqlDtD6Mbl40lhq7R3bYHPuwlFwhXYLJNHFY6Di5S9FKJAP9ByER6R8uHJ4EH3d9xAj5TgVqE%2BJSltb4ycCvcu2ubjQwj7egVFm8pQol7fCQ9c9PPwYrbrAFPOeA5JSJLfDVmNXaeMF3QsQD6Cwoqx4WVPGFEL4W3dpyD%2FPeojqkffsaQVijZ1jdrCa4aksLkwXrQMynDyg7%2BKHRu8fcZViL8O%2BGPmeL0SjR9eEbyMeytQifXE7Jy3ug9xaEIOH2%2BwOxE74Co6mSMMSB6kKX%2F2NM5HBbhyEooIIFvoLQdnz7XXNlPMooVhnPQ9pkjlghMCQBu; path=/; httponly
-H Content-Length: 18
+H set-cookie: rack.session=AnC%2BMUx5PzDBMEHgClRp1Qp5zt3UG8V9h%2B8WnvSxTWnyy%2FztQgsybR%2Fsl2nK7JTZiC026%2Btug13aP%2BqnSJ4vcnzJZpspSda
 <h1>Not Found</h1>
 
-==================== /flag ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/flag -> 404
-H x-cascade: pass
+=============== GET /box/new ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/new -> 404 len 11
 H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AqaDIZ20wH%2BFYSp0qr3dUPdZKahmbqP41NrRAig0LuNQnjCMJKzUKckYDUC2bMMmqgc2yVeLR2VvyJgly8L8MnIYGqTnBeenJFXH0U4n%2BiO8IQ0fZq%2BtzLuQqfYoc%2BWTlPuODyIGJhrgun7YKU%2BIKV%2Frrb6SLJLJIxxvnnCBwRxU6kv8xy3hMSPuntPbKV86ZOuN6XIXlnrd9mdKYJPGu%2BnBBS7WOKlXFsFczCXPqBP1gUJXTPrySzjFWUxUR6v47JG9zNAHzHAFfaDJoNYEy%2BBynRlxoB7fXtc%2FJo9Cw%2BUltHHckgwrGtrwduuIgM%2Fe89DlsvQ939NgQ3RBTRL1hADWeGWZ76oAdbyn8pVf7Cp9Dwo5Vk1tIOyHlVKq; path=/; httponly
-H Content-Length: 18
+H set-cookie: rack.session=Aso%2FEApBLJcqrOI9hgFTgtBi84lDYycGrxfrEQ2lxVMIsIDxT%2B0amkkPtXjdRde27f2bvNvmDBYdL4gniQ%2FKo5UD8QZvOyaoztnq9
+no such box
+
+=============== GET /new ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/new -> 404 len 18
+H content-type: text/html;charset=utf-8
+H set-cookie: rack.session=AiyUysmkHllveUZWoYsv6YDBg6NtJDaViyDjrHjTEWwdbF2nZdyEQPSlyTpr2Q0rn5nMFiPIeoxBOKIZPUnVEDs3pr31TEff7XElrlAGVzn
 <h1>Not Found</h1>
 
-==================== /admin ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/admin -> 404
-H x-cascade: pass
+=============== GET /upload ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/upload -> 404 len 18
 H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AtKBH00VR78d0y4vZIMkakvOUPB8BiKHx9p2rXoNVgGH%2FTT4cBuZhLOFCRhTdhXEDodThbit3eGI%2FyU85HshFLYvwkApEol5LKuhuMQSCXV6lKaSZ3uQDFoff8ihpkoIpQBruSTFVtL0z84UIPQR63fgbMdxg8to579HHPh7YqjSBspOD4VfG%2FAruo4qe%2FA0H6tghnlxqKR%2FFo6%2FmMyokrsyGoKIpBDqTinwf8SeONChnDXb8QUv2x1FcOVAlHDp7cYCtTc74yb6goek6jw%2BBxLLKBcOj%2B7c2lSE4ns5Wyp6mzqu08vIQZDdFnHdbJ1JTH7bjzQdQkBQuYXzkcY%2FlmkbfmAKvvEieKypsACrXTqMK2n6ulrjIqPIknhJ; path=/; httponly
-H Content-Length: 18
-<h1>Not Found</h1>
-
-==================== /upload ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/upload -> 404
-H x-cascade: pass
-H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AvjPKm9dTe4VZPtLuKWFwDmTTgMT166XBkDTVK%2B%2FyjKAInTJlDHp0f03xIhr7B%2BdpMEwm3dwccVBJQtA%2B022iXqnryTWtuWKx3DaGd2161et5zC2GbPOvG8xGKBh8ca75uLGPQ%2BQfez02WDmZ4YRWzchL%2F3%2FdmPm0%2BsL63yu0zv9xhGSiZ9YIxPCpPgxCRlQFOzYmiSqeeXsioZH9tT9Q%2FU8X8pfEPMk5iOitRNpeQMKHBBKLTTxSKK7EmVp01uLE5t%2FS9lPX2Dh437zgr2SEBODCkvl7wJDPodR6a2XbBKylxTgex4ypGhutT9j6ZmKEOEaaBX%2Be%2FDtUQ0jF38IB2GPuQR9LfmQTKbwSazn0YCJwbKxWg3sAFMmJCb2; path=/; httponly
-H Content-Length: 18
-<h1>Not Found</h1>
-
-==================== /boxes ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 302
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/login
-H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AqZ2wKvGhB320KOZ5DM%2BpKPdWy6ZW4QmOBkXwIMp2uuovXoHoFUu6hG38NVWujrMm%2Bo4VE4Q8IOuk2kFNjrMO%2BOqDGuj0yEPbUuruQexz5aB33UiRtaTAswIRiOLLypv3Wxt8eKjtGNQyH39fjRjik54mpiHVofGikbES1BLlsq7Z%2Fhm43%2BHabSxhlzfNY%2FFYgR7KjOW%2BeGCATk0vzCroS7AqDMtHcZO0h1obhC9sov%2FSv5Z9eJhqqN30cl%2Fuh7xa2KDgFEgO%2Fw2uhK03%2FnhJZEdL1lZQDX%2BQpL11XdDCeiWCPqIZK3vteKUvkZLjd52OfwYT10lfiWKBXmwgy8sv6U2KwDmLA6ZapAKmRiw%2B0ty0NC2JS%2FgMQU9zoIE; path=/; httponly
-H Content-Length: 0
-
-
-==================== /feed ====================
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/feed -> 404
-H x-cascade: pass
-H content-type: text/html;charset=utf-8
-H x-xss-protection: 1; mode=block
-H x-content-type-options: nosniff
-H x-frame-options: SAMEORIGIN
-H set-cookie: rack.session=AsFV1NnUYibgIwwXeg5y36flw0oRaLZucDP5jzeIyBRxZ5C3dp4%2Bd6mmWfLks0UDZ9QaWjaorojyfQVpLB0mOoQOAyr1V7FFZ8qyxoyS4v6PvAGWGbhwhQII7AmSvU0o%2BT%2BV23iWE%2FEqLbAAvO5eOYdqNNLBXB3d93Volw0JJQMdAsWnLZ9kEQ0jAY5jrI8t9gxwd9k0NEKUXHKyvic4WpqG0cj58FhDT7rnwXfyJwP4Bz1iK4MQOSZU%2Fkn4CCRJYs7fopgtRg2d76tv61DI1kuyvYF%2BzSRmlF0O9c5nOBYJ1k8JJ5noHKqwiFO31cJQR3Bmompr%2BPzup51tMT3l2l1Dfu2LN1dTsCdfWGMaGf2YMzRs9Lfn32aSCcOa; path=/; httponly
-H Content-Length: 18
+H set-cookie: rack.session=AhMOakkqpxfMyt2AkkkUSFcJ7xHpmeced%2BAitt8fRhpTnmRpOF4VDVYc59b8nc%2BpXF1wCNvwwk9B7kppFNWM2755AZrRryDyyyHgjVw
 <h1>Not Found</h1>
 
