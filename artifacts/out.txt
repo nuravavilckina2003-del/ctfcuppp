@@ -1,8 +1,5 @@
-no-term-10 CHANT: 'A wild cheer erupts: AAAAAAAAAA!'
-no-term-10 NICKS: ["'AAAAAAAAAA'"]
-no-term-9 CHANT: 'A wild cheer erupts: BBBBBBBBB !'
-no-term-9 NICKS: ["'BBBBBBBBB '"]
-ff-at-99 CHANT: 'A wild cheer erupts: CCCCCCCCCC!'
-ff-at-99 NICKS: ["'CCCCCCCCCC'"]
-two CHANT: 'A wild cheer erupts: DDDDDDDDDDEEEEEEEEEE!'
-two NICKS: ["'DDDDDDDDDD'", "'EEEEEEEEEE'"]
+GET comment -> 404 <h1>Not Found</h1>
+comment present: False
+GET settings -> 200 <!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, in
+bio set: False
+POST comment -> 303 present: True
