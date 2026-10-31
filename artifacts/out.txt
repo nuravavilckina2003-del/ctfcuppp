@@ -1,28 +1,19 @@
-=== probe 1: empty + dummy ===
-PROMPT: [*] Please, enter token:
-> 
-SEND: ''
-RECV: [-] Invalid token.
-
-SEND: 'test'
-RECV: 
-SEND: '1'
-send err [Errno 32] Broken pipe
-=== probe 2: numbers/urls ===
-PROMPT: [*] Please, enter token:
-> 
-SEND: '1'
-RECV: [-] Invalid token.
-
-SEND: 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260'
-RECV: 
-SEND: 'trainer01'
-send err [Errno 32] Broken pipe
-=== share response headers ===
-share status 303
-headers {'location': 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260', 'content-type': 'text/html;charset=utf-8', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN', 'set-cookie': 'rack.session=Au3hDNQAD2jaB8P9PGx5Ts2onPOmJrestT%2Fd37dLw%2BIk3cPhaTBREBjsKA%2FteoqbYsNYwrm1%2BHoWQNl8ZHbCI3J1%2F0EhreBs5zmOzo0j%2BkOBQmWfVYYggMIYx%2FmwxxyCScEzG5sbCqc%2BSNcYmn2HHh9C6K%2FlFM5SA2z9hVF1HacoHlte6JYDDtGiM7a7XnaTWSaAu6iO2PsDj%2F0UpfxCJDW2yMZkiN91ThLesWgBccteEwWCIrvwNHYgRUkj86O8omZczw2ZwCWjTdAk1FszDG8w7FibqfnprI2G2RRX%2FqKsWNJlDsp7lNPMojHSxb9L%2BuArUwAD6SINdvyW9nRQx5LPT0nZ9feti9JyD2o1X7Jc%2FKqIqrj6Aj%2Fy3qwY; path=/; httponly', 'Content-Length': '0'}
-body ''
-token in page: False
-Token in page: False
-TOKEN in page: False
-secret in page: False
+token 'trainer01' -> '[-] Invalid token.'
+token 'pass12345' -> '[-] Invalid token.'
+token 'trainer01:pass12345' -> '[-] Invalid token.'
+token 'dHJhaW5lcjAxOnBhc3MxMjM0NQ==' -> '[-] Invalid token.'
+token 'ctfcup' -> '[-] Invalid token.'
+token 'ctfcup2026' -> '[-] Invalid token.'
+token 'pokebox' -> '[-] Invalid token.'
+token '27wg1nxt69l0o1gh' -> '[-] Invalid token.'
+token '260' -> '[-] Invalid token.'
+token '261' -> '[-] Invalid token.'
+token '241' -> '[-] Invalid token.'
+token 'AiOyb97LBhKiktUdB35Lks+oS0m8qq+POcA8lPud' -> '[-] Invalid token.'
+token 'AiOyb97LBhKiktUdB35Lks%2BoS0m8qq%2BPOcA8' -> '[-] Invalid token.'
+token 'rack.session=AiOyb97LBhKiktUdB35Lks+oS0m' -> '[-] Invalid token.'
+token 'dHJhaW5lcjAx' -> '[-] Invalid token.'
+token 'trainer01:pass12345:260' -> '[-] Invalid token.'
+token 'agenthit' -> '[-] Invalid token.'
+token 'bot' -> '[-] Invalid token.'
+token 'ctf_bot' -> '[-] Invalid token.'
