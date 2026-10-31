@@ -1,3 +1,20 @@
-TAKEN: ctf_bot
-   profile: 200  <div class="trainer-card"> <h1>@ctf_bot</h1> <p class="muted">This trainer hasn't written a bio yet.</p> </div> <h2>Shared boxes</h2> <ul class="feed"> <li class="muted">No shared boxes yet.</li> </ul> 
-taken total 1 ['ctf_bot']
+dnslog domain 'lb43oi.dnslog.cn' 200
+self dns resolved
+records after self: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+box 260 share 303
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
+records: []
