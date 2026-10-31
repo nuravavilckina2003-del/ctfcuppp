@@ -1,4 +1,4 @@
-import os, sys, struct, requests, re, traceback
+import os, sys, struct, requests, re, traceback, html
 BASE=os.environ.get("BASE","http://27wg1nxt69l0o1gh.instances.ctfcup.online")
 print("start")
 s=requests.Session(); s.headers['User-Agent']='Mozilla/5.0'
@@ -9,7 +9,7 @@ REV={}
 for line in open("artifacts/map.txt"):
     b,_,r=line.partition(' ')
     r=r.strip()
-    try: ch=eval(r)
+    try: ch=html.unescape(eval(r))
     except Exception: continue
     if len(ch)==4 and len(set(ch))==1:
         REV.setdefault(ch[0], int(b,16))
