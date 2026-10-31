@@ -1,31 +1,137 @@
-no cookie [Errno 2] No such file or directory: 'artifacts/cookie.txt'
-=============== GET /boxes (before login) ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 302 len 0
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/login
+cookie loaded
+=============== GET /settings ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/settings -> 200 len 1055
 H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=AvJarrJdz5vraM8gXfNArk6L4%2BP9ZsNdLwN4pxyHZ7O9aCc6GimjtNbhh3y6GXQ%2Bngu3jO5ooYXOfXhtiLvX%2BK1RpIzOVJLPnvZjS
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>Trainer settings</h1>
+<form method="post" action="/settings" class="card">
+  <label>Bio <input name="bio" maxlength="300" value=""
+         placeholder="Say hi! Supports card-markup: [b] [i] [shiny] [sparkle] [fire]"></label>
+  <button>Save bio</button>
+</form>
+<p class="muted">Your bio shows on your public profile at
+   <a href="/u/trainer01">/u/trainer01</a>.</p>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
 
 
-=============== POST /register ===============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/register -> 303 len 0
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes
+=============== GET /u/trainer01 ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/u/trainer01 -> 200 len 904
 H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=Al41%2FfR3aorczNGZkwZtxGTdRd8xQ2KIr%2BcBAUe41YA8OM5jXENqiBcdEQvVSELLm%2BRMFmFDbtrHU90o2Jyg5rCTXjhuMqzKzAVmV
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <div class="trainer-card">
+  <h1>@trainer01</h1>
+  
+    <p class="muted">This trainer hasn't written a bio yet.</p>
+  
+</div>
+<h2>Shared boxes</h2>
+<ul class="feed">
+  
+  <li class="muted">No shared boxes yet.</li>
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
 
 
-cookies: {'rack.session': 'Al41%2FfR3aorczNGZkwZtxGTdRd8xQ2KIr%2BcBAUe41YA8OM5jXENqiBcdEQvVSELLm%2BRMFmFDbtrHU90o2Jyg5rCTXjhuMqzKzAVmVarZ3KdQ3zdQ68QycnoI0k%2FEY%2B%2BHUHODQSwFv%2Fnnvr91lQRiRe8BF1J7NbQhk3vKsMwpLOL2k8cJ%2BGkB%2BMfvC4QLJEXjHT2roIUyRo%2BkJvVHFxJzFD9P%2FX4zZoLXvEqIACtMZB%2B4qNUkgz0Qz6Ih2%2Fvwk5E8yk4Z8snyuMI1tgSDS1kDafex%2BCJIE59jtDTikeWEz8yKklR1gM1%2BQ5QPA1y1xsb6h2t2k05QZDc1Fw2obbdDMGkC6fkig3K7DoQEMGCG%2B4TxUnXWQU%2F%2FeGP2ILXP'}
-=============== POST /login ===============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/login -> 303 len 0
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes
+=============== POST /boxes random ===============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 400 len 1584
 H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=AmrfXgjN44joK105lBWcozhYM2ewNBuqF9TGhOBccfqO%2BW2DpKwr%2FbkeVEkasu%2BDTnl2hv7CUnsCmN4Vp1ED4T2lgr9UBwuKjaTXZ
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>My boxes</h1>
+<p class="error">could not read save: no valid save block</p><form method="post" action="/boxes" enctype="multipart/form-data" class="card">
+  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
+  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
+  <label>Gen III save (.sav) <input type="file" name="save" required></label>
+  <button>Import box</button>
+</form>
+<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
+   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
+   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
+   <a href="/settings">bio</a> too.</p>
+<ul class="feed">
+  
+  <li class="muted">No boxes yet — import a save above.</li>
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
 
 
-cookies: {'rack.session': 'AmrfXgjN44joK105lBWcozhYM2ewNBuqF9TGhOBccfqO%2BW2DpKwr%2FbkeVEkasu%2BDTnl2hv7CUnsCmN4Vp1ED4T2lgr9UBwuKjaTXZRqNMPUvEzAlJls6HaUUR8mkgi9YToOynmXfjWlvg7cDiHOgR4vKtmu%2FcdKzpGZ60aoDQap66Fmzflhf%2FlXqXfzoA%2B5EWmDZouw8Uvj5ncSa4zsTHfdy%2BCeHeL5tB85UE%2B1YtiZ5s2SWQmWeGc3MT%2BnnOUd1L%2BK8FObfCcskX8Jo%2B1MfqWhTGzB4uLGvyGQ6FTp8LMtIX0sQ%2BarxOAE5iJcJm093tVINsCagjvzXBGa09lflt%2BNBPQAlAL%2FmBKsxQ5DavTH41zqy5yWpZqntQmtZ'}
-=============== GET /boxes ===============
+=============== GET /boxes after ===============
 GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 200 len 1523
 H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=Ak6Fl8ayy%2F%2FaYHDa0eeXUIRx8uBJ6WKYG48KqEcDX8JQ5FoMFqE%2Bh9XmWpL19SCP6F5zoQ%2F2uceUSXTc53XC8%2FePmVjKFq6gt
 <!doctype html>
 <html lang="en">
 <head>
@@ -70,27 +176,88 @@ H set-cookie: rack.session=Ak6Fl8ayy%2F%2FaYHDa0eeXUIRx8uBJ6WKYG48KqEcDX8JQ5FoMF
 </html>
 
 
-=============== GET /boxes/new ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes/new -> 404 len 18
+=============== GET / ===============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/ -> 200 len 856
 H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=AnC%2BMUx5PzDBMEHgClRp1Qp5zt3UG8V9h%2B8WnvSxTWnyy%2FztQgsybR%2Fsl2nK7JTZiC026%2Btug13aP%2BqnSJ4vcnzJZpspSda
-<h1>Not Found</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>Shared boxes</h1>
+<p class="lead">Fresh teams from trainers around the world.</p>
+<ul class="feed">
+  
+  <li class="muted">No shared boxes yet. Be the first!</li>
+</ul>
 
-=============== GET /box/new ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/new -> 404 len 11
-H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=Aso%2FEApBLJcqrOI9hgFTgtBi84lDYycGrxfrEQ2lxVMIsIDxT%2B0amkkPtXjdRde27f2bvNvmDBYdL4gniQ%2FKo5UD8QZvOyaoztnq9
-no such box
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
 
-=============== GET /new ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/new -> 404 len 18
-H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=AiyUysmkHllveUZWoYsv6YDBg6NtJDaViyDjrHjTEWwdbF2nZdyEQPSlyTpr2Q0rn5nMFiPIeoxBOKIZPUnVEDs3pr31TEff7XElrlAGVzn
-<h1>Not Found</h1>
 
-=============== GET /upload ===============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/upload -> 404 len 18
+=============== POST /boxes zeros ===============
+POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 400 len 1589
 H content-type: text/html;charset=utf-8
-H set-cookie: rack.session=AhMOakkqpxfMyt2AkkkUSFcJ7xHpmeced%2BAitt8fRhpTnmRpOF4VDVYc59b8nc%2BpXF1wCNvwwk9B7kppFNWM2755AZrRryDyyyHgjVw
-<h1>Not Found</h1>
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>My boxes</h1>
+<p class="error">could not read save: not a valid Gen III save</p><form method="post" action="/boxes" enctype="multipart/form-data" class="card">
+  <label>Box title <input name="title" maxlength="60" placeholder="e.g. [shiny]Living Dex[/shiny]"></label>
+  <label>Description <input name="description" maxlength="300" placeholder="Supports card-markup: [b] [i] [shiny] [sparkle] [fire] [pokeball] [heart]"></label>
+  <label>Gen III save (.sav) <input type="file" name="save" required></label>
+  <button>Import box</button>
+</form>
+<p class="muted">Tip: titles and descriptions support <strong>card-markup</strong> —
+   tags like <code>[b]bold[/b]</code>, <code>[shiny]…[/shiny]</code>,
+   <code>[sparkle]</code>, <code>[pokeball]</code>. Set your trainer
+   <a href="/settings">bio</a> too.</p>
+<ul class="feed">
+  
+  <li class="muted">No boxes yet — import a save above.</li>
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
 
