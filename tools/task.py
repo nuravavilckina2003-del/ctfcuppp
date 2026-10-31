@@ -1,4 +1,4 @@
-import os, sys, struct, requests, re
+import os, sys, struct, requests, re, traceback
 BASE=os.environ.get("BASE","http://27wg1nxt69l0o1gh.instances.ctfcup.online")
 OUT=open("artifacts/out.txt","w")
 def log(*a):
@@ -23,7 +23,10 @@ def make_save():
     s1=bytearray(SIZES[1]); sec(1,100,s1)
     for i in range(2,14): sec(i,100,bytes(SIZES[i]))
     return bytes(buf)
-sv=make_save()
+try:
+  sv=make_save()
+except Exception:
+  traceback.print_exc(); raise
 tags="b i u s code quote spoiler url img color size center left right font table tr td list hr br p div script style iframe svg marquee a link mention user shiny sparkle fire pokeball heart ball star ice water electric grass psychic dragon dark fairy normal fighting poison ground flying bug rock ghost steel".split()
 results={}
 for t in tags:
