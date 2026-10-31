@@ -1,20 +1,16 @@
-dnslog domain 'lb43oi.dnslog.cn' 200
-self dns resolved
-records after self: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-box 260 share 303
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: [["selftest.lb43oi.dnslog.cn","40.124.68.34","2026-11-01 01:39:16"]]
-records: []
+== POST fuzz /box/260/<word> ==
+POST /box/260/share -> 303 0 loc=http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260 
+POST /box/260/comment -> 303 0 loc=http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260 
+== POST fuzz top-level ==
+POST /boxes -> 400 7 loc= no file
+POST /settings -> 303 0 loc=http://27wg1nxt69l0o1gh.instances.ctfcup.online/u/trainer01 
+POST /login -> 401 956 loc= <!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="wi
+POST /register -> 400 971 loc= <!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="wi
+== share variants ==
+share {} -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share {'trainer': 'ctf_bot'} -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share {'to': 'ctf_bot'} -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share {'share_with': 'ctf_bot'} -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share {'notify': '1'} -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share {'trainers': '1'} -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share {'url': 'http://x/'} -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
