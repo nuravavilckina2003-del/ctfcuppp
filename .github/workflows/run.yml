@@ -17,7 +17,7 @@ jobs:
         run: |
           python -m pip install -q requests || echo "PIP FAILED"
           mkdir -p artifacts
-          python -u tools/exploit.py > artifacts/out.txt 2>&1 || echo "TASK EXIT $?" >> artifacts/out.txt
+          python -u tools/fuzz.py > artifacts/out.txt 2>&1 || echo "TASK EXIT $?" >> artifacts/out.txt
           tail -c 6000 artifacts/out.txt
       - name: Commit
         run: |
