@@ -1,5 +1,7 @@
-party=6 box=289 stat=6/6 chantlen=82 chant='A wild cheer erupts: AAAAAAAAAABBBBBBBBBBCCCCCCCCCCDDDDDDDDDDEEEEEEEEEEFFFFFFFFFF!'
-party=7 box=290 stat=6/6 chantlen=82 chant='A wild cheer erupts: AAAAAAAAAABBBBBBBBBBCCCCCCCCCCDDDDDDDDDDEEEEEEEEEEFFFFFFFFFF!'
-party=8 box=291 stat=6/6 chantlen=82 chant='A wild cheer erupts: AAAAAAAAAABBBBBBBBBBCCCCCCCCCCDDDDDDDDDDEEEEEEEEEEFFFFFFFFFF!'
-party=10 box=292 stat=6/6 chantlen=82 chant='A wild cheer erupts: AAAAAAAAAABBBBBBBBBBCCCCCCCCCCDDDDDDDDDDEEEEEEEEEEFFFFFFFFFF!'
-party=255 box=293 stat=6/6 chantlen=82 chant='A wild cheer erupts: AAAAAAAAAABBBBBBBBBBCCCCCCCCCCDDDDDDDDDDEEEEEEEEEEFFFFFFFFFF!'
+fresh set-cookie: rack.session=AqawQrn47LYWzzMGkmevuGB9iriGjEep1gsOOJ3ICIXXQ6hdzUCPmTSKPcIe3lcG8MtPchU22MQX4YAVSMfrrF70V1ZTCtc8Bi4gXl7kYUc
+bot(fresh) -> [-] Invalid token.
+bot(fresh) -> [-] Invalid token.
+login set-cookie ok: True
+bot(login ck) -> [-] Invalid token.
+bot(login ck) -> [-] Invalid token.
+password brute done, none
