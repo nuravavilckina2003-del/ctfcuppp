@@ -1,0 +1,73 @@
+===== HEADERS =====
+HTTP/1.1 200 OK
+content-type: text/html;charset=utf-8
+x-xss-protection: 1; mode=block
+x-content-type-options: nosniff
+x-frame-options: SAMEORIGIN
+set-cookie: rack.session=Aqur%2FdzL%2BsNTBYhKrlPQP3TpZXLF6wJKK4AgMTNAL%2F8mxOuQMrEVcP7dNt6Y%2BETdD8llc4pdNtMKUHE108UC5aAv9hM%2BrNMYxPcJhhm1DozlgSDiyssmWSJidLsC8P1tjdrPTTvQRkwQwUgjpsn2ahhaTIZOgK8vbuCRhwgCbKgNVe2NzdHkcpDA1kTgtrBsGElJIK8BEiHsE3a%2F5AXXwlv9KWdKbPeAoRCOBr7xzagF6rBx%2BIyhnGtCSICcqX4TWB%2BlGj2Rvz%2B8uQA5uvJ4Zk7VNc1wZN%2FAa%2B0u9x5akoFehv6vN%2FC7mjlziGO9UblCB5XGrFsjFKUSIGVQVmqGnJ9Ao0EA5m9n4OYle1QFgC2roPlkCQQRC2G4AVRQ; path=/; httponly
+Content-Length: 758
+
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/login">login</a>
+        <a href="/register">register</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>Shared boxes</h1>
+<p class="lead">Fresh teams from trainers around the world.</p>
+<ul class="feed">
+  
+  <li class="muted">No shared boxes yet. Be the first!</li>
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
+===== BODY =====
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/login">login</a>
+        <a href="/register">register</a>
+      
+    </nav>
+  </header>
+  <main>
+    <h1>Shared boxes</h1>
+<p class="lead">Fresh teams from trainers around the world.</p>
+<ul class="feed">
+  
+  <li class="muted">No shared boxes yet. Be the first!</li>
+</ul>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
