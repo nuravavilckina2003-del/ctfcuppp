@@ -1,24 +1,7 @@
 cookie loaded
-============ anon /box/1 ============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1 -> 403 len 19
-H content-type: text/html;charset=utf-8
-this box is private
-
-============ anon /boxes ============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes -> 302 len 0
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/login
-H content-type: text/html;charset=utf-8
-
-
-============ post comment ============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1/comment -> 303 len 0
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1
-H content-type: text/html;charset=utf-8
-
-
-============ get /box/1 after comment ============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1 -> 200 len 2045
-H content-type: text/html;charset=utf-8
+upload raw -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/2
+============ box raw ============
+GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/2 -> 200 len 1993
 <!doctype html>
 <html lang="en">
 <head>
@@ -42,50 +25,54 @@ H content-type: text/html;charset=utf-8
   </header>
   <main>
     <div class="trainer-card">
-  <h1>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</h1>
+  <h1>raw save test</h1>
   <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
 
   
-    <p class="box-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</p>
+    <p class="box-desc">raw desc</p>
   
 
   <dl class="trainer-stats">
-    <div><dt>Trainer</dt><dd>AGENT</dd></div>
+    <div><dt>Trainer</dt><dd></dd></div>
     <div><dt>ID No.</dt><dd>12345</dd></div>
     <div><dt>Gender</dt><dd>Boy</dd></div>
     <div><dt>Play time</dt><dd>0:00:00</dd></div>
-    <div><dt>Party</dt><dd>1/6</dd></div>
+    <div><dt>Party</dt><dd>2/6</dd></div>
   </dl>
 
   <h2>Party</h2>
   <ol class="party-list">
     
       <li>
-        <span class="nick">PIKA</span>
+        <span class="nick"></span>
         <span class="lv">Lv50</span>
-        <span class="hp">HP 0/0</span>
+        <span class="hp">HP 10/20</span>
+      </li>
+    
+      <li>
+        <span class="nick">%)%) </span>
+        <span class="lv">Lv50</span>
+        <span class="hp">HP 10/20</span>
       </li>
     
   </ol>
 
   <h2>Team chant</h2>
   <p class="muted">Your Pokémon's nicknames, shouted together as the team's battle cry:</p>
-  <p class="card-line">A wild cheer erupts: PIKA!</p>
+  <p class="card-line">A wild cheer erupts: %)%) !</p>
 </div>
 
-  <form method="post" action="/box/1/share">
+  <form method="post" action="/box/2/share">
     <button>Share to the feed</button>
   </form>
 
 <h2>Comments</h2>
 <ul class="comments">
   
-    <li><strong>@trainer01</strong> hi &lt;script&gt;alert(3)&lt;/script&gt; [b]bold[/b] [shiny]s[/shiny]</li>
-  
-  
+  <li class="muted">No comments yet.</li>
 </ul>
 
-  <form method="post" action="/box/1/comment" class="card">
+  <form method="post" action="/box/2/comment" class="card">
     <label>Say something <input name="body" maxlength="500" required></label>
     <button>Post</button>
   </form>
@@ -96,111 +83,23 @@ H content-type: text/html;charset=utf-8
 </html>
 
 
-============ post settings ============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/settings -> 303 len 0
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/u/trainer01
-H content-type: text/html;charset=utf-8
-
-
-============ get /u/trainer01 ============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/u/trainer01 -> 200 len 1090
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <div class="trainer-card">
-  <h1>@trainer01</h1>
-  
-    <p class="box-desc">bio &lt;script&gt;alert(4)&lt;/script&gt; <em>it</em> <span class="tag-ball">◓</span>p[/pokeball] <span class="tag-heart">♥</span>h[/heart] <span class="tag-fire">🔥f</span> <span class="tag-sparkle">✨sp✨</span></p>
-  
-</div>
-<h2>Shared boxes</h2>
-<ul class="feed">
-  
-  <li class="muted">No shared boxes yet.</li>
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-============ share ============
-POST http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1/share -> 303 len 0
-H location: http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/1
-H content-type: text/html;charset=utf-8
-
-
-============ feed / ============
-GET http://27wg1nxt69l0o1gh.instances.ctfcup.online/ -> 200 len 1153
-H content-type: text/html;charset=utf-8
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>Shared boxes</h1>
-<p class="lead">Fresh teams from trainers around the world.</p>
-<ul class="feed">
-  
-    <li>
-      <a href="/box/1"><strong>My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;</strong></a>
-      <span class="muted">by <a href="/u/trainer01">@trainer01</a> · 2026-10-31 16:50:02</span>
-      
-        <div class="feed-desc">desc <span class="tag-shiny">x</span> &lt;img src=x onerror=alert(2)&gt;</div>
-      
-    </li>
-  
-  
-</ul>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-
-anon box 1 -> 200 len 1679 ['My box <strong>bold</strong> &lt;script&gt;alert(1)&lt;/script&gt;']
-anon box 2 -> 404 len 11 []
-anon box 3 -> 404 len 11 []
-anon box 4 -> 404 len 11 []
-anon box 5 -> 404 len 11 []
-anon box 6 -> 404 len 11 []
-anon box 7 -> 404 len 11 []
+COMMENTS RAW: '<h2>Comments</h2>\n<ul class="comments">\n  \n    <li><strong>@trainer01</strong> hi &lt;script&gt;alert(3)&lt;/script&gt; [b]bold[/b] [shiny]s[/shiny]</li>\n  \n  \n</ul>'
+ids ['http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/3', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/4', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/5', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/6', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/7', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/8', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/9', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/10', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/11', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/12', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/13', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/14', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/15', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/16', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/17', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/18', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/19', 'http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/20']
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/3 TITLE: '<strong>a</strong>' DESC: '<strong>a</strong>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/4 TITLE: '<strong>a' DESC: '<strong>a'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/5 TITLE: '</strong>a' DESC: '</strong>a'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/6 TITLE: '[shiny=x]a</span>' DESC: '[shiny=x]a</span>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/7 TITLE: '[b class=x]a</strong>' DESC: '[b class=x]a</strong>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/8 TITLE: '[B]a[/B]' DESC: '[B]a[/B]'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/9 TITLE: '<strong><em>a</strong></em>' DESC: '<strong><em>a</strong></em>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/10 TITLE: '<span class="tag-shiny"><strong>a</span>' DESC: '<span class="tag-shiny"><strong>a</span>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/11 TITLE: '<strong>a</span>' DESC: '<strong>a</span>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/12 TITLE: '<span class="tag-ball">◓</span>a[/pokeball]' DESC: '<span class="tag-ball">◓</span>a[/pokeball]'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/13 TITLE: '<span class="tag-heart">♥</span><strong>x</strong>[/heart]' DESC: '<span class="tag-heart">♥</span><strong>x</strong>[/heart]'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/14 TITLE: 'a<strong></strong>c' DESC: 'a<strong></strong>c'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/15 TITLE: '<strong>&quot;&gt;&lt;script&gt;alert(5)&lt;/script&gt;</strong>' DESC: '<strong>&quot;&gt;&lt;script&gt;alert(5)&lt;/script&gt;</strong>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/16 TITLE: '<strong>&amp;lt;script&amp;gt;</strong>' DESC: '<strong>&amp;lt;script&amp;gt;</strong>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/17 TITLE: '<span class="tag-sparkle">✨a✨</span><span class="tag-fire">🔥b</span>' DESC: '<span class="tag-sparkle">✨a✨</span><span class="tag-fire">🔥b</span>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/18 TITLE: '<strong>a</strong><strong>b</strong>' DESC: '<strong>a</strong><strong>b</strong>'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/19 TITLE: '[<strong>]a[</strong>]' DESC: '[<strong>]a[</strong>]'
+BOX http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/20 TITLE: '<strong><strong>a</strong></strong>' DESC: '<strong><strong>a</strong></strong>'
