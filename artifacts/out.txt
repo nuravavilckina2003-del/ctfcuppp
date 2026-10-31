@@ -1,24 +1,33 @@
-== boxes title hash -> 303 0 text/html;charset=utf-8
-
-== boxes desc hash -> 303 0 text/html;charset=utf-8
-
-== boxes no save -> 400 7 text/html;charset=utf-8
-no file
-== settings bio hash -> 303 0 text/html;charset=utf-8
-
-== comment body hash -> 303 0 text/html;charset=utf-8
-
-== share id str -> 303 0 text/html;charset=utf-8
-
-== box id huge -> 404 11 text/html;charset=utf-8
-no such box
-== box id neg -> 404 11 text/html;charset=utf-8
-no such box
-== box id float -> 404 11 text/html;charset=utf-8
-no such box
-== u name weird -> 404 15 text/html;charset=utf-8
-no such trainer
-== register no pw -> 400 971 text/html;charset=utf-8
-<!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, initial-scale=1">   <title>PokéBox — share your box</title>   <link rel="stylesheet" href="/style.css"> </head> <body>   <header>     <a class="brand" href="/">📦 PokéBox</a>     <nav>       <a href="/">feed</a>                <a href="/boxes">my boxes</a>         <a href="/settings">settings</a>         <a class="who" href="/u/trainer01">@trainer01</a>         <a href="/logout">logout</a>            </nav>   </header>   <main>     <h1>Register</h1> <p class="error">fill both fields</p><form method="post" action="/register" class="card">   <label>Trainer name <input name="username" required></label>   <label>Password <input name="password" type="password" required></label>   <button>Create account</button> </form>    </main>   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer> </body> </html> 
-== login hash -> 401 956 text/html;charset=utf-8
-<!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="viewport" content="width=device-width, initial-scale=1">   <title>PokéBox — share your box</title>   <link rel="stylesheet" href="/style.css"> </head> <body>   <header>     <a class="brand" href="/">📦 PokéBox</a>     <nav>       <a href="/">feed</a>                <a href="/boxes">my boxes</a>         <a href="/settings">settings</a>         <a class="who" href="/u/trainer01">@trainer01</a>         <a href="/logout">logout</a>            </nav>   </header>   <main>     <h1>Login</h1> <p class="error">bad credentials</p><form method="post" action="/login" class="card">   <label>Trainer name <input name="username" required></label>   <label>Password <input name="password" type="password" required></label>   <button>Log in</button> </form>    </main>   <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer> </body> </html> 
+ctf_bot profile BEFORE:  <div class="trainer-card"> <h1>@ctf_bot</h1> <p class="muted">This trainer hasn't written a bio yet.</p> </div> <h2>Shared boxes</h2> <ul class="feed"> <li class="muted">No shared boxes yet.</li> </ul> 
+share trainer=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share to=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share user=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share username=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share recipient=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share share_with=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share with=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share target=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share trainers=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+share who=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
+ctf_bot profile AFTER:  <div class="trainer-card"> <h1>@ctf_bot</h1> <p class="muted">This trainer hasn't written a bio yet.</p> </div> <h2>Shared boxes</h2> <ul class="feed"> <li class="muted">No shared boxes yet.</li> </ul> 
+my profile:  <div class="trainer-card"> <h1>@trainer01</h1> <p class="box-desc">{&quot;a&quot;=&gt;&quot;x&quot;}</p> </div> <h2>Shared boxes</h2> <ul class="feed"> <li> <a href="/box/263"><strong>chain submitter <em>C</em></strong></a> <span class="muted">2026-10-31 17:46:23</span> </li> <li> <a href="/box/262"><strong>chain setter <strong>B</strong></strong></a> <span class="muted">2026-10-31 17:46:21</span> </li> <li> <a href="/box/261"><strong>single submit <span class="tag-fire">🔥A</span></strong></a> 
+comment mention -> 303
+bio mention -> 303
+tag '[b]%s%s%s[/b]' -> 303 
+tag '[shiny]%s%s%s[/shiny]' -> 303 
+tag '[fire]%s%s%s[/fire]' -> 303 
+tag '[b]%{x}[/b]' -> 303 
+tag '[shiny]%{x}[/shiny]' -> 303 
+tag '[fire]%{x}[/fire]' -> 303 
+tag '[b]%<x>s[/b]' -> 303 
+tag '[shiny]%<x>s[/shiny]' -> 303 
+tag '[fire]%<x>s[/fire]' -> 303 
+tag '[b]%d[/b]' -> 303 
+tag '[shiny]%d[/shiny]' -> 303 
+tag '[fire]%d[/fire]' -> 303 
+tag '[b]%n[/b]' -> 303 
+tag '[shiny]%n[/shiny]' -> 303 
+tag '[fire]%n[/fire]' -> 303 
+tag '[b]%p[/b]' -> 303 
+tag '[shiny]%p[/shiny]' -> 303 
+tag '[fire]%p[/fire]' -> 303 
