@@ -1,31 +1,30 @@
-/u/ctf_bot%27%20OR%20%271%27%3D%271 -> 404 15 no such trainer
-/u/ctf_bot%27-- -> 404 15 no such trainer
-/u/ctf_bot%25%27%20OR%201%3D1-- -> 404 15 no such trainer
-/u/x%27%20UNION%20SELECT%201-- -> 404 15 no such trainer
-/u/%25%27%20OR%201%3D1-- -> 404 15 no such trainer
-/u/ctf_bot%27%20AND%20%271%27%3D%271 -> 404 15 no such trainer
-/u/ctf_bot%27%20AND%20%271%27%3D%272 -> 404 15 no such trainer
-/u/ctf_bot%2500 -> 404 15 no such trainer
-/u/%2525 -> 404 15 no such trainer
-/u/_ -> 404 15 no such trainer
-/u/%25 -> 404 15 no such trainer
-/u/%2A -> 404 15 no such trainer
-/u/ctf%25 -> 404 15 no such trainer
-/u/ctf_bot -> 200 902 <!doctype html> <html lang="en"> <head> <meta charset="utf-8"> <meta name="viewport" content="width=device-width, in
-/home/runner/work/ctfcuppp/ctfcuppp/tools/exploit.py:19: FutureWarning: Possible nested set at position 1
-  log(f"/box/{u} -> {r.status_code} {len(r.content)} {re.sub(r'[[:space:]]+',' ',r.text[:80])}")
-/box/1%27%20OR%20%271%27%3D%271 -> 404 11 no such box
-/box/1%20OR%201%3D1 -> 404 11 no such box
-/box/1%2520OR%25201%3D1 -> 404 11 no such box
-/box/1%27-- -> 404 11 no such box
-/box/0x1 -> 404 11 no such box
-/box/%2B1 -> 200 2055 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="v
-/box/01 -> 200 2055 <!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="v
+PUT /box/301/share -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+PATCH /box/301/share -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+DELETE /box/301/share -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+OPTIONS /box/301/share -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+HEAD /box/301/share -> 404 0 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} 
+PUT /box/301 -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+PATCH /box/301 -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+DELETE /box/301 -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+OPTIONS /box/301 -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+HEAD /box/301 -> 200 0 {'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} 
+PUT /settings -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+PATCH /settings -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+DELETE /settings -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+OPTIONS /settings -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+HEAD /settings -> 200 0 {'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} 
+PUT /boxes -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+PATCH /boxes -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+DELETE /boxes -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+OPTIONS /boxes -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+HEAD /boxes -> 200 0 {'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} 
+PUT /u/ctf_bot -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+PATCH /u/ctf_bot -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+DELETE /u/ctf_bot -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+OPTIONS /u/ctf_bot -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+HEAD /u/ctf_bot -> 200 0 {'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} 
+PUT / -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+PATCH / -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+DELETE / -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+OPTIONS / -> 404 18 {'x-cascade': 'pass', 'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} <h1>Not Found</h1>
+HEAD / -> 200 0 {'x-xss-protection': '1; mode=block', 'x-content-type-options': 'nosniff', 'x-frame-options': 'SAMEORIGIN'} 
