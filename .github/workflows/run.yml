@@ -15,7 +15,7 @@ jobs:
           python-version: '3.12'
       - name: Run
         run: |
-          python -m pip install -q requests || echo "PIP FAILED"
+          python -m pip install -q requests playwright && python -m playwright install --with-deps chromium || echo "PIP FAILED"
           mkdir -p artifacts
           python -u tools/exploit.py > artifacts/out.txt 2>&1 || echo "TASK EXIT $?" >> artifacts/out.txt
           tail -c 8000 artifacts/out.txt
