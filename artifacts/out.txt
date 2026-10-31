@@ -1,134 +1,15 @@
-==== /settings ====
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <h1>Trainer settings</h1>
-<form method="post" action="/settings" class="card">
-  <label>Bio <input name="bio" maxlength="300" value="@ctf_bot hello there"
-         placeholder="Say hi! Supports card-markup: [b] [i] [shiny] [sparkle] [fire]"></label>
-  <button>Save bio</button>
-</form>
-<p class="muted">Your bio shows on your public profile at
-   <a href="/u/trainer01">/u/trainer01</a>.</p>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-==== /box/240 (private, owner) ====
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <div class="trainer-card">
-  <h1>two</h1>
-  <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
-
-  
-    <p class="box-desc">d</p>
-  
-
-  <dl class="trainer-stats">
-    <div><dt>Trainer</dt><dd></dd></div>
-    <div><dt>ID No.</dt><dd>12345</dd></div>
-    <div><dt>Gender</dt><dd>Boy</dd></div>
-    <div><dt>Play time</dt><dd>0:00:00</dd></div>
-    <div><dt>Party</dt><dd>2/6</dd></div>
-  </dl>
-
-  <h2>Party</h2>
-  <ol class="party-list">
-    
-      <li>
-        <span class="nick">DDDDDDDDDD</span>
-        <span class="lv">Lv0</span>
-        <span class="hp">HP 0/0</span>
-      </li>
-    
-      <li>
-        <span class="nick">EEEEEEEEEE</span>
-        <span class="lv">Lv0</span>
-        <span class="hp">HP 0/0</span>
-      </li>
-    
-  </ol>
-
-  <h2>Team chant</h2>
-  <p class="muted">Your Pokémon's nicknames, shouted together as the team's battle cry:</p>
-  <p class="card-line">A wild cheer erupts: DDDDDDDDDDEEEEEEEEEE!</p>
-</div>
-
-  <form method="post" action="/box/240/share">
-    <button>Share to the feed</button>
-  </form>
-
-<h2>Comments</h2>
-<ul class="comments">
-  
-  <li class="muted">No comments yet.</li>
-</ul>
-
-  <form method="post" action="/box/240/comment" class="card">
-    <label>Say something <input name="body" maxlength="500" required></label>
-    <button>Post</button>
-  </form>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
-==== json accepts ====
-/boxes {'Accept': 'application/json'} -> 200 text/html;charset=utf-8 41101 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/boxes {'Accept': 'text/plain'} -> 200 text/html;charset=utf-8 41101 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/boxes {'X-Requested-With': 'XMLHttpRequest'} -> 200 text/html;charset=utf-8 41101 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/box/260 {'Accept': 'application/json'} -> 200 text/html;charset=utf-8 2242 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/box/260 {'Accept': 'text/plain'} -> 200 text/html;charset=utf-8 2242 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/box/260 {'X-Requested-With': 'XMLHttpRequest'} -> 200 text/html;charset=utf-8 2242 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/u/ctf_bot {'Accept': 'application/json'} -> 200 text/html;charset=utf-8 902 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/u/ctf_bot {'Accept': 'text/plain'} -> 200 text/html;charset=utf-8 902 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/u/ctf_bot {'X-Requested-With': 'XMLHttpRequest'} -> 200 text/html;charset=utf-8 902 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/ {'Accept': 'application/json'} -> 200 text/html;charset=utf-8 3369 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/ {'Accept': 'text/plain'} -> 200 text/html;charset=utf-8 3369 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/ {'X-Requested-With': 'XMLHttpRequest'} -> 200 text/html;charset=utf-8 3369 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/settings {'Accept': 'application/json'} -> 200 text/html;charset=utf-8 1075 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/settings {'Accept': 'text/plain'} -> 200 text/html;charset=utf-8 1075 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
-/settings {'X-Requested-With': 'XMLHttpRequest'} -> 200 text/html;charset=utf-8 1075 '<!doctype html>\n<html lang="en">\n<head>\n  <meta charset="utf-8">\n  <meta name="v'
+new box 285
+after share main:  <div class="trainer-card"> <h1>flash test</h1> <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p> <p class="box-desc">d</p> <dl class="trainer-stats"> <div><dt>Trainer</dt><dd></dd></div> <div><dt>ID No.</dt><dd>12345</dd></div> <div><dt>Gender</dt><dd>Boy</dd></div> <div><dt>Play time</dt><dd>0:00:00</dd></div> <div><dt>Party</dt><dd>1/6</dd></div> </dl> <h2>Party</h2> <ol class="party-list"> <li> <span class="nick">PIKA</span> <span class="lv">Lv50</span> <span class="hp">HP 0/0</span> </li> </ol> <h2>Team chant</h2> <p class="muted">Your Pokémon's nicknames, shouted toget
+any token-ish: []
+flash cookie? [('rack.session', 'AiOyb97LBhKiktUdB35Lks%2BoS0m8qq%2BPOcA8lPud%2BG4MnatygjWhA%2FVurhc2qdr9kFNkdMniKkPw6WoWUv1aY9pjvW4RF%2B1s4Rtx8Q5%2BOKmm%2BeyJ4M8G2ee2C3a46iABPWoX%2FjacidAYmBNHvcTIs3p1afjLHdEG856A0kY9P27ANfVEQj6mtiZTrtOp2qUJ%2FU1ai%2FEsZtdX69vymzzAOWpYO3Ya4U0Y9k8XHNsSS3diXT82OIPXcDNWhDLRMpT4XwOe94v77ElXa%2BYM1mz%2FuDzIllQYzz4wcvASDbWw2HtEGbYJZjYOW3RGPuXA2%2FHNT8HRQQsp%2BWsyxax28zznqajvvrMkkBb5AoDzflZrLS0jGLVwjf5%2F1zJrRvax'), ('rack.session', 'AoaxKCNx1BpnSu6QhRjdqauHJEJPTV4yxyTixt0YHZ7JcUNbCbPuRgm1fXqcouNHYmcFVwc%2B4EF1I0g8foGFmrIzoPoFySCC%2BvtQBCZBvSOQsYLWwczbglEZkzkhY7frv3%2FgPaqgEg5MOZc9tTAF4htZPsqVqzM8iBRrSG88zCGns29meurIDmh1rbdI%2BCZhj2KpAjYwSBpU020FJVkp6y%2BqDl5LIa93EErN0tfHUa2vLC0IVt8fopLpilVu4I6GnekkrEazFhXUF7qk11p3sQxv%2FpevzUsS4iaoiiF0v8DR0i2dHQ93CkDdjWjI6QeR4PI7qJHhbAPW6IjlSJ%2BbAVlhviDLRxt%2FAtzvGcilIuRIiTwY8jvnHFpua%2FLW')]
+Traceback (most recent call last):
+  File "/home/runner/work/ctfcuppp/ctfcuppp/tools/exploit.py", line 48, in <module>
+    log("cookie len",len(s.cookies.get('rack.session','')))
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/cookies.py", line 225, in get
+    return self._find_no_duplicates(name, domain, path)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/hostedtoolcache/Python/3.12.15/x64/lib/python3.12/site-packages/requests/cookies.py", line 444, in _find_no_duplicates
+    raise CookieConflictError(
+requests.cookies.CookieConflictError: There are multiple cookies with name, 'rack.session'
+TASK EXIT 1
