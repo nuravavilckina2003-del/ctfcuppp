@@ -1,19 +1,9 @@
-token 'trainer01' -> '[-] Invalid token.'
-token 'pass12345' -> '[-] Invalid token.'
-token 'trainer01:pass12345' -> '[-] Invalid token.'
-token 'dHJhaW5lcjAxOnBhc3MxMjM0NQ==' -> '[-] Invalid token.'
-token 'ctfcup' -> '[-] Invalid token.'
-token 'ctfcup2026' -> '[-] Invalid token.'
-token 'pokebox' -> '[-] Invalid token.'
-token '27wg1nxt69l0o1gh' -> '[-] Invalid token.'
-token '260' -> '[-] Invalid token.'
-token '261' -> '[-] Invalid token.'
-token '241' -> '[-] Invalid token.'
-token 'AiOyb97LBhKiktUdB35Lks+oS0m8qq+POcA8lPud' -> '[-] Invalid token.'
-token 'AiOyb97LBhKiktUdB35Lks%2BoS0m8qq%2BPOcA8' -> '[-] Invalid token.'
-token 'rack.session=AiOyb97LBhKiktUdB35Lks+oS0m' -> '[-] Invalid token.'
-token 'dHJhaW5lcjAx' -> '[-] Invalid token.'
-token 'trainer01:pass12345:260' -> '[-] Invalid token.'
-token 'agenthit' -> '[-] Invalid token.'
-token 'bot' -> '[-] Invalid token.'
-token 'ctf_bot' -> '[-] Invalid token.'
+done common
+'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA' ['[*] Please, enter token:\n> ', '[-] Invalid token.\n']
+'%s%s%n' ['[*] Please, enter token:\n> ', '[-] Invalid token.\n']
+"' OR 1=1 --" ['[*] Please, enter token:\n> ', '[-] Invalid token.\n']
+'admin\x00x' ['[*] Please, enter token:\n> ', '[-] Invalid token.\n']
+' ' ['[*] Please, enter token:\n> ', '[-] Invalid token.\n']
+'   ' ['[*] Please, enter token:\n> ', '[-] Invalid token.\n']
+'admin password' ['[*] Please, enter token:\n> ', '[-] Invalid token.\n']
+multi-line: ['[*] Please, enter token:\n> ', '[-] Invalid token.\n', '']
