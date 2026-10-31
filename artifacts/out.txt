@@ -1,5 +1,85 @@
-uuid b7ce5923-88a5-4f04-870a-3f4d792950bc
-direct webhook GET 200 https://webhook.site/b7ce5923-88a5-4f04-870a-3f4d792950bc/selftest?a=1 156
-is.gd 200 https://webhook.site/b7ce5923-88a5-4f04-870a-3f4d792950bc 156 text/html; charset=UTF-8
-api 200 application/json
-{"data":[{"uuid":"592aa4f1-430d-410b-aecf-2f5c3315ede4","type":"web","token_id":"b7ce5923-88a5-4f04-870a-3f4d792950bc","team_id":null,"ip":"48.217.148.83","country":"United States of America","country_code":"US","region":"Virginia","city":"Washington","hostname":"webhook.site","protocol":"http\/1.1","method":"GET","user_agent":"python-requests\/2.34.2","content":"","query":null,"headers":{"accept":["*\/*"],"accept-encoding":["gzip, deflate"],"user-agent":["python-requests\/2.34.2"],"host":["webhook.site"]},"url":"https:\/\/webhook.site\/b7ce5923-88a5-4f04-870a-3f4d792950bc","size":0,"files":[],"created_at":"2026-10-31 17:26:52","updated_at":"2026-10-31 17:26:52","sorting":1793467612391955,"custom_action_output":[],"custom_action_errors":[],"time":0.0008950233459472656},{"uuid":"7fc7c834-e9
+/robots.txt ERR HTTPConnectionPool(host='27wg1nxt69l0o1gh.instances.ctfcup.online', port=80): Max retries exceeded with url: /robots.txt (Caused by NameResolutionError("HTTPConnection(host='27wg1nxt69l0o1gh.instances.ctfcup.online', port=80): Failed to resolve '27wg1nxt69l0o1gh.instances.ctfcup.online' ([Errno -5] No address associated with hostname)"))
+==== FULL BOX HTML ====
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>PokéBox — share your box</title>
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <header>
+    <a class="brand" href="/">📦 PokéBox</a>
+    <nav>
+      <a href="/">feed</a>
+      
+        <a href="/boxes">my boxes</a>
+        <a href="/settings">settings</a>
+        <a class="who" href="/u/trainer01">@trainer01</a>
+        <a href="/logout">logout</a>
+      
+    </nav>
+  </header>
+  <main>
+    <div class="trainer-card">
+  <h1>beacon</h1>
+  <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
+
+  
+    <p class="box-desc">d</p>
+  
+
+  <dl class="trainer-stats">
+    <div><dt>Trainer</dt><dd></dd></div>
+    <div><dt>ID No.</dt><dd>12345</dd></div>
+    <div><dt>Gender</dt><dd>Boy</dd></div>
+    <div><dt>Play time</dt><dd>0:00:00</dd></div>
+    <div><dt>Party</dt><dd>3/6</dd></div>
+  </dl>
+
+  <h2>Party</h2>
+  <ol class="party-list">
+    
+      <li>
+        <span class="nick">&lt;img src=/</span>
+        <span class="lv">Lv50</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+      <li>
+        <span class="nick">/is.gd/t4Y</span>
+        <span class="lv">Lv50</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+      <li>
+        <span class="nick">QzO&gt;</span>
+        <span class="lv">Lv50</span>
+        <span class="hp">HP 0/0</span>
+      </li>
+    
+  </ol>
+
+  <h2>Team chant</h2>
+  <p class="muted">Your Pokémon's nicknames, shouted together as the team's battle cry:</p>
+  <p class="card-line">A wild cheer erupts: <img src=//is.gd/t4YQzO>!</p>
+</div>
+
+
+<h2>Comments</h2>
+<ul class="comments">
+  
+  <li class="muted">No comments yet.</li>
+</ul>
+
+  <form method="post" action="/box/242/comment" class="card">
+    <label>Say something <input name="body" maxlength="500" required></label>
+    <button>Post</button>
+  </form>
+
+  </main>
+  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
+</body>
+</html>
+
