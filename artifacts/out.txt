@@ -1,85 +1,26 @@
-/robots.txt ERR HTTPConnectionPool(host='27wg1nxt69l0o1gh.instances.ctfcup.online', port=80): Max retries exceeded with url: /robots.txt (Caused by NameResolutionError("HTTPConnection(host='27wg1nxt69l0o1gh.instances.ctfcup.online', port=80): Failed to resolve '27wg1nxt69l0o1gh.instances.ctfcup.online' ([Errno -5] No address associated with hostname)"))
-==== FULL BOX HTML ====
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>PokéBox — share your box</title>
-  <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-  <header>
-    <a class="brand" href="/">📦 PokéBox</a>
-    <nav>
-      <a href="/">feed</a>
-      
-        <a href="/boxes">my boxes</a>
-        <a href="/settings">settings</a>
-        <a class="who" href="/u/trainer01">@trainer01</a>
-        <a href="/logout">logout</a>
-      
-    </nav>
-  </header>
-  <main>
-    <div class="trainer-card">
-  <h1>beacon</h1>
-  <p class="muted">shared by <a href="/u/trainer01">@trainer01</a></p>
-
-  
-    <p class="box-desc">d</p>
-  
-
-  <dl class="trainer-stats">
-    <div><dt>Trainer</dt><dd></dd></div>
-    <div><dt>ID No.</dt><dd>12345</dd></div>
-    <div><dt>Gender</dt><dd>Boy</dd></div>
-    <div><dt>Play time</dt><dd>0:00:00</dd></div>
-    <div><dt>Party</dt><dd>3/6</dd></div>
-  </dl>
-
-  <h2>Party</h2>
-  <ol class="party-list">
-    
-      <li>
-        <span class="nick">&lt;img src=/</span>
-        <span class="lv">Lv50</span>
-        <span class="hp">HP 0/0</span>
-      </li>
-    
-      <li>
-        <span class="nick">/is.gd/t4Y</span>
-        <span class="lv">Lv50</span>
-        <span class="hp">HP 0/0</span>
-      </li>
-    
-      <li>
-        <span class="nick">QzO&gt;</span>
-        <span class="lv">Lv50</span>
-        <span class="hp">HP 0/0</span>
-      </li>
-    
-  </ol>
-
-  <h2>Team chant</h2>
-  <p class="muted">Your Pokémon's nicknames, shouted together as the team's battle cry:</p>
-  <p class="card-line">A wild cheer erupts: <img src=//is.gd/t4YQzO>!</p>
-</div>
-
-
-<h2>Comments</h2>
-<ul class="comments">
-  
-  <li class="muted">No comments yet.</li>
-</ul>
-
-  <form method="post" action="/box/242/comment" class="card">
-    <label>Say something <input name="body" maxlength="500" required></label>
-    <button>Post</button>
-  </form>
-
-  </main>
-  <footer>PokéBox — upload your .sav, show off your team, trade tips with trainers.</footer>
-</body>
-</html>
-
+u/admin -> 404 15 no such trainer
+u/administrator -> 404 15 no such trainer
+u/mod -> 404 15 no such trainer
+u/moderator -> 404 15 no such trainer
+u/professor -> 404 15 no such trainer
+u/oak -> 404 15 no such trainer
+u/flag -> 404 15 no such trainer
+u/ctfcup -> 404 15 no such trainer
+u/bot -> 404 15 no such trainer
+u/trainer -> 404 15 no such trainer
+u/trainers -> 404 15 no such trainer
+u/root -> 404 15 no such trainer
+u/support -> 404 15 no such trainer
+u/staff -> 404 15 no such trainer
+u/team -> 404 15 no such trainer
+settings+ {'admin': '1'} -> 303
+   bio has MASSTEST: True | admin words: []
+settings+ {'role': 'admin'} -> 303
+   bio has MASSTEST: True | admin words: []
+settings+ {'is_admin': '1'} -> 303
+   bio has MASSTEST: True | admin words: []
+settings+ {'user_id': '1'} -> 303
+   bio has MASSTEST: True | admin words: []
+register+admin -> 303 http://27wg1nxt69l0o1gh.instances.ctfcup.online/boxes
+nav:  <a href="/">feed</a> <a href="/boxes">my boxes</a> <a href="/settings">settings</a> <a class="who" href="/u/trainer99">@trainer99</a> <a href="/logout">logout</a> 
+settings page fields: ['viewport', 'bio']
